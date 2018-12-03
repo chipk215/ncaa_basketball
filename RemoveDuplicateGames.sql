@@ -1,0 +1,10 @@
+
+WITH CTE AS
+(SELECT *, RN=ROW_NUMBER() OVER(PARTITION BY game_id ORDER BY game_id)
+	FROM [NCAA_Basketball].[dbo].[d1_2015])
+DELETE FROM CTE WHERE RN>1
+
+
+
+
+
