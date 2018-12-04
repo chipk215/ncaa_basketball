@@ -32,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1069">
-              <caret line="46" column="63" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="46" selection-end-column="63" />
+              <caret line="46" column="63" selection-start-line="45" selection-start-column="4" selection-end-line="46" selection-end-column="63" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
                 <marker date="1543878040843" expanded="true" signature="97:2592" ph="..." />
@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/db_utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -95,8 +95,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4126" />
-    <option name="y" value="606" />
+    <option name="x" value="4249" />
+    <option name="y" value="687" />
     <option name="width" value="1640" />
     <option name="height" value="804" />
   </component>
@@ -245,15 +245,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543459458924</updated>
-      <workItem from="1543852007677" duration="10859000" />
+      <workItem from="1543852007677" duration="11418000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10859000" />
+    <option name="totallyTimeSpent" value="11418000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4126" y="606" width="1640" height="804" extended-state="0" />
+    <frame x="4249" y="687" width="1640" height="804" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1443038" />
@@ -465,7 +465,7 @@
     <entry file="file://$PROJECT_DIR$/db_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -488,7 +488,7 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1069">
-          <caret line="46" column="63" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="46" selection-end-column="63" />
+          <caret line="46" column="63" selection-start-line="45" selection-start-column="4" selection-end-line="46" selection-end-column="63" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
             <marker date="1543878040843" expanded="true" signature="97:2592" ph="..." />

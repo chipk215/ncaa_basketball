@@ -6,4 +6,4 @@ SELECT game_id,scheduled_date, home_team, market, opp_market, win,
         free_throws_pct,
         turnovers      
 FROM [NCAA_Basketball].[dbo].[d1_2015]
-WHERE ( (market = 'Oakland') OR (opp_market = 'Oakland')) AND (scheduled_date < '2016-01-02' )
+WHERE ( (market = 'Cornell') OR (opp_market = 'Cornell')) AND (scheduled_date < '2015-11-17' )
