@@ -28,7 +28,7 @@ def run_main():
     # reorder columns
 
     column_titles = ['game_id', 'game_date', 'principal_team', 'opponent_team', 'home_team',
-                     'principal_score', 'opponent_score', 'field_goals_pct',
+                     'principal_score', 'opponent_score', 'points_game', 'field_goals_pct',
                      'offensive_rebounds', 'free_throws_att', 'free_throws_pct',
                      'turnovers', 'win_pct', 'game_result']
 
@@ -38,17 +38,18 @@ def run_main():
                                       'free_throws_att': 'delta_avg_free_throws_att',
                                       'free_throws_pct': 'delta_avg_free_throws_pct',
                                       'turnovers': 'delta_avg_turnovers',
+                                      'points_game': 'delta_avg_points_per_game',
                                       'win_pct': 'delta_win_pct'}, inplace=True)
 
     # encode all percentages to be between -1 < 0 < 1
     game_stats_raw_df.loc[:, ['delta_field_goals_pct', 'delta_avg_free_throws_pct']] /= 100.0
-    encode_game_result = {"game_result": {"0": "LOSS", "1": "WIN"}}
+    encode_game_result = {"game_result": {"False": "LOSS", "True": "WIN"}}
     game_stats_raw_df.replace(encode_game_result, inplace=True)
 
     game_stats_df = game_stats_raw_df[abs(game_stats_raw_df.delta_win_pct) <= 1.000001]
     print(game_stats_df.shape)
 
-    game_stats_df.to_csv('data\PARTIAL_D1_2015_Processed_Stats.csv', index=False)
+    game_stats_df.to_csv('data\D1_2015_Processed_Stats.csv', index=False)
 
 
 if __name__ == "__main__":

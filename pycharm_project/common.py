@@ -3,7 +3,7 @@ import pandas as pd
 
 def get_games_for_training(season, db_connect):
     sql = ("\n"
-           "    SELECT TOP 300 game_id, season, scheduled_date, \n"
+           "    SELECT game_id, season, scheduled_date, \n"
            "        home_team, market, opp_market, win, \n"
            "        points_game, opp_points_game,\n"
            "        field_goals_pct, \n"
@@ -23,11 +23,12 @@ def get_games_for_training(season, db_connect):
 # The database assigns labels to teams in a game. One team is labeled as 'market' while the other team
 # is labeled as 'opp_market'. When gathering games for a specific team both fields must be searched.
 def get_games_for_team(season, team, game_date, db_connect):
+    print(team)
     team_search = team
     if "'" in team:
         pos = team.find("'")
         team_search = team[: pos]
-        print(team)
+
 
     sql = """
     SELECT scheduled_date, home_team, market, opp_market, win, 
