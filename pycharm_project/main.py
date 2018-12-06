@@ -4,52 +4,29 @@ import db_utils
 
 
 def run_main():
-    # connect to the database
     connection = db_utils.connect_to_database()
-
     games_df = common.get_games_for_training(2015, connection)
-    # games_df.info()
+    combo_stats = games_df.apply(lambda x: common.get_team_stats(x.season, x.scheduled_date,
+                                                                 x.market, x.opp_market,
+                                                                 connection), axis=1)
+    combo_df = combo_stats[0]
+    for row in range(1, combo_stats.shape[0]):
+        combo_df = pd.concat([combo_df, combo_stats[row]], ignore_index=True)
 
-    stats = games_df.apply(lambda x: common.process_game_record(x.season, x.scheduled_date, x.market,
-                                                                x.opp_market, connection), axis=1)
+    combo_df.insert(0, 'game_id', games_df['game_id'])
+    combo_df.insert(1, 'home_team', games_df['home_team'])
+    combo_df.insert(2, 'principal_team', games_df['market'])
+    combo_df.insert(3, 'opponent_team', games_df['opp_market'])
+    combo_df.insert(4, 'game_result', games_df['win'].astype(str))
+    combo_df.insert(5, 'game_date', games_df['scheduled_date'])
+    combo_df.insert(6, 'principal_score', games_df['points_game'])
+    combo_df.insert(7, 'opponent_score', games_df['opp_points_game'])
 
-    game_stats_raw_df = stats[0]
-    for row in range(1, stats.shape[0]):
-        game_stats_raw_df = pd.concat([game_stats_raw_df, stats[row]], ignore_index=True)
+    # remove all records that have nan as win percentages
+    combo_df = combo_df[(combo_df.prn_win_pct.notnull()) & (combo_df.opp_win_pct.notnull())]
 
-    game_stats_raw_df['game_id'] = games_df['game_id']
-    game_stats_raw_df['home_team'] = games_df['home_team']
-    game_stats_raw_df['principal_team'] = games_df['market']
-    game_stats_raw_df['opponent_team'] = games_df['opp_market']
-    game_stats_raw_df['game_result'] = games_df['win'].astype(str)
-    game_stats_raw_df['game_date'] = games_df['scheduled_date']
-    game_stats_raw_df['principal_score'] = games_df['points_game']
-    game_stats_raw_df['opponent_score'] = games_df['opp_points_game']
-    # reorder columns
-
-    column_titles = ['game_id', 'game_date', 'principal_team', 'opponent_team', 'home_team',
-                     'principal_score', 'opponent_score', 'points_game', 'field_goals_pct',
-                     'offensive_rebounds', 'free_throws_att', 'free_throws_pct',
-                     'turnovers', 'win_pct', 'game_result']
-
-    game_stats_raw_df = game_stats_raw_df.reindex(columns=column_titles)
-    game_stats_raw_df.rename(columns={'field_goals_pct': 'delta_field_goals_pct',
-                                      'offensive_rebounds': 'delta_avg_off_rebounds',
-                                      'free_throws_att': 'delta_avg_free_throws_att',
-                                      'free_throws_pct': 'delta_avg_free_throws_pct',
-                                      'turnovers': 'delta_avg_turnovers',
-                                      'points_game': 'delta_avg_points_per_game',
-                                      'win_pct': 'delta_win_pct'}, inplace=True)
-
-    # encode all percentages to be between -1 < 0 < 1
-    game_stats_raw_df.loc[:, ['delta_field_goals_pct', 'delta_avg_free_throws_pct']] /= 100.0
-    encode_game_result = {"game_result": {"False": "LOSS", "True": "WIN"}}
-    game_stats_raw_df.replace(encode_game_result, inplace=True)
-
-    game_stats_df = game_stats_raw_df[abs(game_stats_raw_df.delta_win_pct) <= 1.000001]
-    print(game_stats_df.shape)
-
-    game_stats_df.to_csv('data\D1_2015_Processed_Stats.csv', index=False)
+    combo_df.to_csv('data\D1_2015_Combo_Stats.csv', index=False)
+    return combo_df
 
 
 if __name__ == "__main__":

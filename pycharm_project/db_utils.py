@@ -17,3 +17,12 @@ def test_connection(connection):
     result = connection.execute("SELECT SYSTEM_USER AS me")
     row = result.fetchone()
     print(row['me'])
+
+
+def run_main():
+    connection = connect_to_database()
+    test_connection(connection)
+
+
+if __name__ == "__main__":
+    run_main()
