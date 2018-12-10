@@ -115,5 +115,5 @@ SELECT a.scheduled_date
 	,M1.prn_enter_win_pct            AS opp_enter_win_pct
 FROM Apriori AS a
 INNER JOIN M1 ON a.game_id = M1.game_id AND a.market = M1.opp_market
-ORDER BY a.scheduled_date, a.market
+ORDER BY  a.market
 
