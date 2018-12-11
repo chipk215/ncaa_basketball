@@ -1,4 +1,4 @@
-SELECT market, team_id
+SELECT market, season, team_id
 	,CAST(AVG(1.0*points_game)       AS DECIMAL(8,3)) AS points_avg
 	,CAST(AVG(1.0*opp_points_game)   AS DECIMAL(8,3)) AS opp_pts_avg
 
@@ -32,5 +32,6 @@ SELECT market, team_id
 	,100*AVG(1.0*points_game)/ (AVG(field_goals_att -  ((offensive_rebounds/(offensive_rebounds + defensive_rebounds)) *(field_goals_att - field_goals_made) *1.07) + 
 			turnovers + (0.4 * free_throws_att))) AS off_rating
 FROM dbo.d1_2015_with_duplicates
-GROUP BY market, team_id 
-ORDER BY off_rating DESC;
+WHERE division_alias='D1' AND opp_division_alias='D1'
+GROUP BY market,season, team_id 
+ORDER BY off_rating DESC
