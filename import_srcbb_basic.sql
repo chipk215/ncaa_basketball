@@ -1,13 +1,52 @@
 
+
+IF (EXISTS (SELECT *
+					FROM INFORMATION_SCHEMA.TABLES
+					WHERE TABLE_SCHEMA = 'dbo'
+					AND TABLE_NAME = 'team_summaries'))
+	BEGIN
+		PRINT N'team_summaries table exists.'
+	END
+ELSE
+	BEGIN
+		PRINT N'team_summaries table does not exist. Creating table...'
+		CREATE TABLE [SRCBB].[dbo].[team_summaries] (
+			Season					INT NOT NULL,
+			School					NVARCHAR(40) NOT NULL,
+			Games					INT NOT NULL,
+			SRS						FLOAT ,
+			SOS						FLOAT ,
+			win_pct					FLOAT NOT NULL,
+			pts_avg					FLOAT,
+			opp_pts_avg				FLOAT,
+			fg_pct					FLOAT,
+			allow_fg_pct			FLOAT,
+			ft_pct					FLOAT, 
+			allow_ft_att_avg		FLOAT,
+			poss_avg				FLOAT,
+			off_rebs_avg			FLOAT,
+			allow_off_rebs_avg		FLOAT,
+			def_rebs_avg			FLOAT,
+			allow_def_rebs_avg		FLOAT,
+			to_avg					FLOAT,
+			steal_avg				FLOAT,
+			off_rating				FLOAT,
+			ft_att_avg				FLOAT,
+
+			PRIMARY KEY (Season, School)	
+		)
+	END
+GO
+
+
+-- Drop the temporary table used to import the season's team data
 IF OBJECT_ID('tempdb..#ImportSeason') IS NOT NULL
     DROP TABLE #ImportSeason
-	DROP TABLE [SRCBB].[dbo].[team_summaries]
-
 	
 
 CREATE TABLE #ImportSeason(
 	Season INT NOT NULL,
-	Rk INT NOT NULL,
+	Rk INT,
     School NVARCHAR(40) NOT NULL,
 	Games INT NOT NULL,
 	Overall_W INT NOT NULL,
@@ -23,7 +62,7 @@ CREATE TABLE #ImportSeason(
 	Away_L	INT NOT NULL,
 	Points_Tm	INT NOT NULL,
 	Points_Opp 	INT NOT NULL, 
-	MP	INT NOT NULL,
+	MP	INT,
 	FGM	INT NOT NULL,
 	FGA	 INT NOT NULL,
 	fg_pct	FLOAT NOT NULL,
@@ -39,12 +78,12 @@ CREATE TABLE #ImportSeason(
 	STL	INT NOT NULL,
 	BLK	INT NOT NULL,
 	TOV	INT NOT NULL,
-	PF INT NOT NULL	
+	PF INT NOT NULL
 )
 GO
 
 BULK INSERT #ImportSeason
-FROM 'C:\Users\CHIPK\Developer\NCAA Data\import_data\original_downloads\2010_basic.csv'
+FROM 'C:\Users\CHIPK\Developer\NCAA Data\import_data\2011_basic.csv'
 WITH(
 FIELDTERMINATOR = ',',
 ROWTERMINATOR = '\n',
@@ -53,111 +92,60 @@ FIRSTROW=3
 
 GO
 
--- Drop unwanted columns
-ALTER TABLE #ImportSeason
-	DROP COLUMN Overall_W, Overall_L, Three_P, Three_PA, Three_P_PCT, Conf_W, Conf_L, Home_W, Home_L, Away_W, Away_L, AST, BLK, PF
-GO
 
--- Add new columns
-ALTER TABLE #ImportSeason
-	ADD pts_avg  float,
-	    opp_pts_avg float,
-		poss_avg float,
-		off_rebs_avg float,
-		def_rebs_avg float,
-		to_avg float,
-		steal_avg float,
-		off_rating float,
-		ft_att_avg float
-		
-GO
 
 -- Remove the NCAA tournament indicator from school name
-UPDATE #ImportSeason
-	SET School=REPLACE(School,'NCAA', '')
-GO
+INSERT INTO [team_summaries] (Season, 
+							  School,
+							  Games,
+							  SRS,
+							  SOS,
+							  win_pct,
+							  pts_avg,
+							  opp_pts_avg,
+							  fg_pct,
+							  ft_pct,
+							  poss_avg,
+							  off_rebs_avg,
+							  def_rebs_avg,
+							  to_avg,
+							  steal_avg,
+							  ft_att_avg
+							  )
+    SELECT  Season, 
+			REPLACE(School,'NCAA', ''),
+			Games,
+			SRS,
+			SOS,
+			win_pct,
+			Points_Tm / Games,
+			opp_pts_avg= Points_Opp / Games,
+			fg_pct,
+			ft_pct,
+			(FGA - (ORB/TRB) * 1.07 * (FGA-FGM) + TOV + 0.4 * FTA) / Games,
+			ORB / Games,
+			(TRB - ORB) / Games,
+			TOV / Games,
+			STL / Games,
+			FTA / Games
 
--- compute the average points scored per game
-UPDATE #ImportSeason
-	SET pts_avg= Points_Tm / Games
-GO
-
--- compute the opponents average points scored per game
-UPDATE #ImportSeason
-	SET opp_pts_avg= Points_Opp / Games
-GO
-
-
--- compute the average  free throws attempted  per game
-UPDATE #ImportSeason
-	SET ft_att_avg = FTA / Games
-GO
-
--- compute the average possessions per game
-UPDATE #ImportSeason
-	SET poss_avg= (FGA - (ORB/TRB) * 1.07 * (FGA-FGM) + TOV + 0.4 * FTA) / Games
-GO
-
--- compute the average offensive rebounds per game
-UPDATE #ImportSeason
-	SET off_rebs_avg = ORB / Games
-GO
-
-
--- compute the average defensive rebounds per game
-UPDATE #ImportSeason
-	SET def_rebs_avg = (TRB - ORB) / Games
-GO
-
--- compute the average turn overs per game
-UPDATE #ImportSeason
-	SET to_avg = TOV / Games
-GO
-
--- compute the average steals per game
-UPDATE #ImportSeason
-	SET steal_avg = STL / Games
+    FROM [#ImportSeason]; 
 GO
 
 -- compute the offensive rating
-UPDATE #ImportSeason
+UPDATE [team_summaries]
 	SET off_rating= 100 * pts_avg / poss_avg
 GO
 
 
--- Drop columns after computations
-ALTER TABLE #ImportSeason
-	DROP COLUMN Points_TM, Points_Opp, MP, FGM, FGA, FT, FTA, ORB, TRB, STL, TOV
-GO
-
-IF (EXISTS (SELECT *
-				FROM INFORMATION_SCHEMA.TABLES
-				WHERE TABLE_NAME = 'team_summaries'))
-	BEGIN
-	   INSERT INTO [SRCBB].[dbo].[team_summaries] 
-	   SELECT * 
-	   FROM #ImportSeason
-	END;
-ELSE
-	BEGIN
-		SELECT * INTO  [SRCBB].[dbo].[team_summaries]
-		FROM #ImportSeason
-	END;
-
-	ALTER TABLE [SRCBB].[dbo].[team_summaries] 
-	ADD CONSTRAINT PK_team_summaries PRIMARY KEY CLUSTERED (Season, Rk, School)
-
-GO
-
-
-
 -- Process the opponent file
 IF OBJECT_ID('tempdb..#ImportOpponent') IS NOT NULL
-    DROP TABLE #ImportOpponent
+    DROP TABLE #ImportOpponent;
+GO
 
-	CREATE TABLE #ImportOpponent(
+CREATE TABLE #ImportOpponent(
 	Season INT NOT NULL,
-	Rk INT NOT NULL,
+	Rk INT ,
     School NVARCHAR(40) NOT NULL,
 	Games INT NOT NULL,
 	Overall_W INT NOT NULL,
@@ -194,7 +182,7 @@ IF OBJECT_ID('tempdb..#ImportOpponent') IS NOT NULL
 GO
 
 BULK INSERT #ImportOpponent
-FROM 'C:\Users\CHIPK\Developer\NCAA Data\import_data\original_downloads\2010_basic_opp.csv'
+FROM 'C:\Users\CHIPK\Developer\NCAA Data\import_data\2011_basic_opp.csv'
 WITH(
 FIELDTERMINATOR = ',',
 ROWTERMINATOR = '\n',
@@ -204,81 +192,28 @@ FIRSTROW=3
 GO
 
 
--- Add new columns
-ALTER TABLE #ImportOpponent
-	ADD allow_off_rebs_avg float,
-		allow_def_rebs_avg float,
-		allow_ft_att_avg float
-				
-GO
-
 -- Remove the NCAA tournament indicator from school name
 UPDATE #ImportOpponent
 	SET School=REPLACE(School,'NCAA', '')
 GO
 
--- compute the average offensive rebounds per game
-UPDATE #ImportOpponent
-	SET allow_off_rebs_avg = opp_ORB / Games
-GO
-
--- compute the average allowed free throws attempted  per game
-UPDATE #ImportOpponent
-	SET allow_ft_att_avg = opp_FTA / Games
-GO
--- compute the average defensive rebounds per game
-UPDATE #ImportOpponent
-	SET allow_def_rebs_avg = (opp_TRB - opp_ORB) / Games
-GO
-
-
--- Drop unwanted columns
-ALTER TABLE #ImportOpponent
-	DROP COLUMN Overall_W, Overall_L, win_pct, SRS, SOS, Conf_W, Conf_L,Home_W, Home_L, Away_W, Away_L, Points_Tm, Points_Opp, MP, opp_Three_P, 
-				opp_Three_PA, opp_Three_P_PCT, opp_AST, opp_BLK, opp_PF, opp_TOV, opp_STL, opp_ft_pct, opp_FGM, opp_FGA, opp_FT, opp_FTA, opp_ORB, opp_TRB
-GO
-
-
--- Add new columns
-ALTER TABLE [SRCBB].[dbo].[team_summaries] 
-	ADD allow_fg_pct  float,
-	    allow_off_rebs_avg float,
-		allow_def_rebs_avg float,
-		allow_ft_att_avg float
-		
-GO
 
 
 UPDATE [SRCBB].[dbo].[team_summaries] SET 
  allow_fg_pct = o.allow_fg_pct,
- allow_off_rebs_avg = o.allow_off_rebs_avg,
- allow_def_rebs_avg= o.allow_def_rebs_avg,
- allow_ft_att_avg = o.allow_ft_att_avg
+ allow_off_rebs_avg = o.opp_ORB / o.Games,
+ allow_def_rebs_avg= (o.opp_TRB - o.opp_ORB) / o.Games,
+ allow_ft_att_avg = o.opp_FTA / o.Games
  FROM [SRCBB].[dbo].[team_summaries] t, #ImportOpponent o
- WHERE (o.Season = t.Season) AND
-			(o.Rk = t.Rk) AND (o.School= t.School)
+ WHERE (o.Season = t.Season) AND (o.School= t.School)
 GO
+
 
 
 SELECT *
 FROM [SRCBB].[dbo].[team_summaries] 
 GO
 
-/* Alternate Update Query  Query 
-UPDATE 
-     t1
-SET 
-     t1.allow_fg_pct =       t2.allow_fg_pct,
-	 t1.allow_off_rebs_avg = t2.allow_off_rebs_avg,
-	 t1.allow_def_rebs_avg= t2.allow_def_rebs_avg,
-	 t1.allow_ft_att_avg = t2.allow_ft_att_avg 
-FROM 
-     [SRCBB].[dbo].[team_summaries] t1 
-     INNER JOIN #ImportOpponent t2 
-     ON (t1.Season = t2.Season) AND
-			(t1.Rk = t2.Rk) AND (t1.School= t2.School);
-
-*/
 
 
 
