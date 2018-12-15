@@ -83,7 +83,7 @@ CREATE TABLE #ImportSeason(
 GO
 
 BULK INSERT #ImportSeason
-FROM 'C:\Users\CHIPK\Developer\NCAA Data\import_data\2011_basic.csv'
+FROM 'C:\Users\CHIPK\Developer\NCAA Data\import_data\SRCBB_basic_2016.csv'
 WITH(
 FIELDTERMINATOR = ',',
 ROWTERMINATOR = '\n',
@@ -182,7 +182,7 @@ CREATE TABLE #ImportOpponent(
 GO
 
 BULK INSERT #ImportOpponent
-FROM 'C:\Users\CHIPK\Developer\NCAA Data\import_data\2011_basic_opp.csv'
+FROM 'C:\Users\CHIPK\Developer\NCAA Data\import_data\SRCBB_basic_opp_2016.csv'
 WITH(
 FIELDTERMINATOR = ',',
 ROWTERMINATOR = '\n',
