@@ -208,7 +208,7 @@ UPDATE [SRCBB].[dbo].[team_summaries] SET
  WHERE (o.Season = t.Season) AND (o.School= t.School)
 GO
 
-
+DELETE FROM [SRCBB].[dbo].[team_summaries] WHERE (School = 'Centenary (LA)') AND (Season=2010)
 
 SELECT *
 FROM [SRCBB].[dbo].[team_summaries] 
