@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80101d2c-0263-46dc-9f4c-956ec0b2e23b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tournament_Model_LR-Delta.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Tournament_Model_LR-Delta.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tournament_Model_LR.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Tournament_Model_LR.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,8 +122,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="3898" />
-    <option name="y" value="556" />
+    <option name="x" value="539" />
+    <option name="y" value="619" />
     <option name="width" value="1939" />
     <option name="height" value="935" />
   </component>
@@ -310,16 +311,17 @@
       <workItem from="1544295584062" duration="9000" />
       <workItem from="1544298549044" duration="8000" />
       <workItem from="1544298586492" duration="135000" />
+      <workItem from="1545240583851" duration="26000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45385000" />
+    <option name="totallyTimeSpent" value="45411000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="120" y="228" width="1938" height="934" extended-state="0" />
+    <frame x="308" y="354" width="1108" height="534" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1819149" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18476191" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -334,13 +336,13 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5018647" side_tool="true" weight="0.33551198" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49974963" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.49813533" visible="true" weight="0.08592777" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.49813533" visible="true" weight="0.084367245" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" sideWeight="0.498366" weight="0.8768657" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" x="0" y="0" width="229" height="499" id="Documentation" order="5" sideWeight="0.501634" side_tool="true" weight="0.54627657" />
+      <window_info anchor="right" x="0" y="0" width="229" height="499" id="Documentation" order="5" sideWeight="0.501634" side_tool="true" visible="true" weight="0.54571426" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
