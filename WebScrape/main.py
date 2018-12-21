@@ -104,12 +104,38 @@ width_dict = {
            4, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            6, 4, 4, 4, 4, 5, 11, 4, 4, 4,
            4, 4, 8, 7, 7],
-    2008: [],
-    2007: [],
-    2006: [],
-    2005: [],
-    2004: [],
-    2003: []
+    2008: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
+           5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
+           4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
+           4, 4, 4, 4, 4, 6, 4, 4, 4, 4,
+           6, 4, 4, 4, 4, 5, 11, 4, 4, 4,
+           4, 8, 7, 7],
+    2007: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
+           5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
+           4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
+           4, 4, 4, 4, 4, 6, 4, 4, 4, 4,
+           6, 4, 4, 4, 4, 5, 11, 4, 4, 8,
+           7, 7],
+    2006: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
+           5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
+           4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
+           4, 4, 4, 4, 4, 6, 4, 4, 4, 4,
+           6, 4, 8, 7, 7],
+    2005: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
+           5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
+           4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
+           4, 4, 4, 4, 4, 6, 4, 4, 4, 6,
+           4, 4, 4, 7, 5, 7, 7],
+    2004: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
+           5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
+           4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
+           4, 4, 4, 4, 4, 6, 4, 4, 4, 6,
+           6, 7, 7, 7],
+    2003: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
+           5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
+           4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
+           4, 4, 4, 4, 4, 6, 4, 4, 4, 8,
+           7, 7]
 }
 
 start_text_dict = {
@@ -122,7 +148,13 @@ start_text_dict = {
     2012: 'KPK BOB',
     2011: 'KPK SAG',
     2010: 'MAS SAG',
-    2009: 'BOB GRN'
+    2009: 'BOB GRN',
+    2008: 'GRN BOB',
+    2007: 'ROH SEL',
+    2006: 'BOB GRN',
+    2005: 'BOB ROH',
+    2004: 'WLK MAS',
+    2003: 'SAG BOB'
 }
 
 
@@ -141,7 +173,7 @@ def compute_win_percentage(team_record):
 
 
 def run_main():
-    season = 2009
+    season = 2003
 
     source = requests.get(url_dict[season]).text
     soup = BeautifulSoup(source, 'lxml')
@@ -196,7 +228,7 @@ def run_main():
 
     # len(width_dict[season])
     df = pd.read_fwf(StringIO(string_buffer), widths=width_dict[season], names=column_names,
-                     usecols=column_names[:55])
+                     usecols=column_names[:42])
 
     df['season'] = season
 
@@ -204,6 +236,7 @@ def run_main():
 
     drop_cols_2018 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'BNT',
                       'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
+
     drop_cols_2017 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'Rank_4', 'Team_4',
                       'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
 
@@ -231,7 +264,25 @@ def run_main():
     drop_cols_2009 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'TRX',
                       'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
 
-    df.drop(columns=drop_cols_2009, inplace=True)
+    drop_cols_2008 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'LYN',
+                      'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
+
+    drop_cols_2007 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'LYN',
+                      'USA', 'AP', 'Mean', 'Median', 'St.Dev']
+
+    drop_cols_2006 = ['Record', 'Rank_1', 'Team_1', 'TRX', 'LYN',
+                      'USA', 'AP', 'Mean', 'Median', 'St.Dev']
+
+    drop_cols_2005 = ['Record', 'Rank_1', 'Team_1', 'LYN', 'DES',
+                      'USA', 'AP', 'Mean', 'Median', 'St.Dev']
+
+    drop_cols_2004 = ['Record', 'Rank_1', 'Team_1', 'LYN', 'DES',
+                      'USA', 'AP', 'Mean', 'Median', 'St.Dev']
+
+    drop_cols_2003 = ['Record', 'Rank_1', 'Team_1', 
+                      'USA', 'AP', 'Mean', 'Median', 'St.Dev']
+
+    df.drop(columns=drop_cols_2003, inplace=True)
 
     f_name = 'data/rankings_' + str(season) + '.csv'
     csv_file = Path(f_name)
