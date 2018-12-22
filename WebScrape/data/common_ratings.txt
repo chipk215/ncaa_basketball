@@ -1,0 +1,17 @@
+Common Ratings for years 203 through 2018.
+ 9 rankings  plus the composite Rank ranking.
+
+COL
+DOL
+MOR
+POM
+RPI
+RTH
+
+Rank  - Composite of all ratings used for season not just these common ratings, we can't use this because it is computed
+using different ratings each season. However, we can use an average of the common ratings.
+
+SAG
+WLK
+WOL
+
