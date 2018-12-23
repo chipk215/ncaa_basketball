@@ -34,6 +34,8 @@ Bucknell,Bucknell,98d2123a-c7b9-4b5f-8a81-43f76d8537dc
 Buffalo,Buffalo,a9f5c9a2-342c-4881-9996-5d5c05ec9bd9
 Butler,Butler,bdb7d7a4-45f8-4bf3-ab85-15488c451494
 BYU,BYU,c31455b2-8a45-4248-aa8f-ce7eab1c6b02
+BYU,Brigham Young,c31455b2-8a45-4248-aa8f-ce7eab1c6b02
+Cal Poly,Cal Poly,45439cdb-af7a-4743-936c-dccc76b30877
 Cal Poly,Cal Poly SLO,45439cdb-af7a-4743-936c-dccc76b30877
 Cal St. Fullerton,CS Fullerton,c009914b-3303-4dee-b915-978aa48a31d0
 California,California,aacdc78d-b7fa-48f6-9686-2fdb8a95030e
@@ -44,6 +46,7 @@ Central Conn. St.,Central Conn,a93bf4f2-3724-4539-8c8a-9ac8ee3741a6
 Central Mich.,C Michigan,472c22e0-843d-472c-a871-f1593fb0725d
 Charleston So.,Charleston So,a3fef707-e4fc-48a0-82f1-f4ef01b76f45
 Charlotte,Charlotte,8ddbfca9-a931-4908-aa31-9fcd17624b5f
+Charlotte,UNC Charlotte,8ddbfca9-a931-4908-aa31-9fcd17624b5f
 Chattanooga,Chattanooga,4c9fb59b-6cec-4b0d-bb0f-628b391d138c
 Chicago St.,Chicago St,2f8c85a7-54f4-4942-be16-2cbac77c82d7
 Cincinnati,Cincinnati,a17dfc54-415f-49c3-a2e6-d6fa9db18b0a
@@ -79,6 +82,7 @@ Eastern Mich.,E Michigan,2ed86226-3fff-4083-90fa-6b02307e6f73
 Eastern Wash.,E Washington,54df21af-8f65-42fc-bc01-8bf750856d70
 Elon,Elon,8accb91e-6086-41b3-a420-7a82fa442365
 ETSU,ETSU,d750d88f-f7b8-4bc3-a5f6-36e7a67ec93e
+ETSU,E Tennessee St,d750d88f-f7b8-4bc3-a5f6-36e7a67ec93e
 Evansville,Evansville,d8217105-e9c2-4267-9538-3aaeea1ae167
 Fairfield,Fairfield,a381465b-4530-4a00-a50c-5253cd7695a0
 Fairleigh Dickinson,F Dickinson,b71d5a1b-2671-4e5a-b94b-06bfb22a27dd
@@ -89,10 +93,11 @@ Florida,Florida,912f8837-1d81-4ef9-a576-a21f271d4c64
 Florida A&M,Florida A&M,cec2527e-5e1e-4817-a628-35666ef13b6e
 Florida St.,Florida St,d3c8a767-b6fc-45d4-a5f2-18406f2993f1
 Fordham,Fordham,7888d144-563d-4f84-b99b-d120aecf1fef
+Fort Wayne,IPFW,22984593-0701-4648-b8a8-f6d695238620
 Fort Wayne,IUPU Ft Wayne,22984593-0701-4648-b8a8-f6d695238620
 Fresno St.,Fresno St,dd8db4d8-d984-4cab-b7f6-22c6b8c2c45f
 Furman,Furman,ca5318f2-48eb-4f6b-896a-966b900aa42f
-Ga. Southern,GA Southern,6b955b96-b736-475e-bffd-e4acf2054169
+Ga. Southern,Ga Southern,6b955b96-b736-475e-bffd-e4acf2054169
 Gardner-Webb,Gardner Webb,79871449-f5a1-4650-b3cf-85b78fd6943e
 George Mason,George Mason,e76479d0-a768-46d2-89bf-7b9dae12bec8
 George Washington,G Washington,d52c3640-069c-4554-982e-e6537c8044f1
@@ -125,6 +130,7 @@ Indiana St.,Indiana St,2a997096-a381-469d-a7e9-9e031c8b071c
 Iona,Iona,255c2a87-40c0-4989-bbb9-d286aac5d28e
 Iowa,Iowa,c10544de-e3bd-4776-ba2e-83df8c017fd1
 Iowa St.,Iowa St,0e4258fa-3154-4c16-b693-adecab184c6c
+IUPUI,Indiana Purdue,90ec10eb-38a4-4a69-b072-ef71d294933b
 IUPUI,IUPUI,90ec10eb-38a4-4a69-b072-ef71d294933b
 Jackson St.,Jackson St,c444e03b-d16b-48b2-9b18-823c2647d41d
 Jacksonville,Jacksonville,fb28bd56-9e56-40c1-992d-71c1e27fe4fd
@@ -136,6 +142,7 @@ Kennesaw St.,Kennesaw,2e8442e9-bd09-4d46-9dd3-de79433287f3
 Kent St.,Kent,3da4798c-2d58-4dac-b66e-ad145a91b544
 Kentucky,Kentucky,2267a1f4-68f6-418b-aaf6-2aa0c4b291f1
 La Salle,La Salle,ad9a3e21-4585-4e35-8946-290fe4a16f18
+La.-Monroe,ULM,18585f21-1d63-4400-974c-433fd5073c34
 La.-Monroe,LA Monroe,18585f21-1d63-4400-974c-433fd5073c34
 Lafayette,Lafayette,6af02334-9ac3-452f-bcf4-20abdb72bd07
 Lamar University,Lamar,eda6c307-1e0f-4a28-82f4-ee9653b343fb
@@ -146,6 +153,7 @@ Little Rock,Ark Little Rock,0dadedb0-2bd3-45e7-91a3-93af6c4e87f2
 LIU Brooklyn,Long Island,82c12e8d-7c6c-47d8-b100-3cbc190d268e
 Long Beach St.,Long Beach St,11a617d5-af03-4cce-bc8a-51114d9e41fe
 Longwood,Longwood,600aad0e-85e7-4db8-be0b-94ba02a08e55
+Louisiana,ULL,63cad858-8654-4956-8438-8fe79cd1208a
 Louisiana,LA Lafayette,63cad858-8654-4956-8438-8fe79cd1208a
 Louisiana Tech,Louisiana Tech,8ff733a9-9f93-46de-ba7e-cf6f7e429670
 Louisville,Louisville,b795ddbc-baab-4499-8803-52e8608520ab
@@ -167,14 +175,16 @@ Miami (FL),Miami FL,7aec5187-cb1b-45e5-8f7d-406d766cdc73
 Miami (OH),Miami OH,1165ca31-f181-4206-b727-c4e897e4b5cd
 Michigan,Michigan,bdc2561d-f603-4fab-a262-f1d2af462277
 Michigan St.,Michigan St,a41d5a05-4c11-4171-a57e-e7a1ea325a6d
+Middle Tenn.,MTSU,3d2f0819-8f3b-4ff3-afd6-6227c469a751
 Middle Tenn.,Middle Tenn St,3d2f0819-8f3b-4ff3-afd6-6227c469a751
 Milwaukee,WI Milwaukee,5d77800f-1ae6-4b66-8e97-b0dbb8bbc717
 Minnesota,Minnesota,fa416692-7e09-4f0a-9bcf-0cf7d5149a14
 Mississippi St.,Mississippi St,a1ba4b89-d97c-44e2-835f-79ad3ccaa5ae
 Mississippi Val.,MS Valley St,5873529e-e5e3-4a06-8a03-fa4cbe509880
 Missouri,Missouri,77ca152a-cb2f-48a5-97b2-492351250d94
+Missouri St.,SW Missouri St,b83de2df-328f-4303-9895-cdff048fb1ed
 Missouri St.,Missouri St,b83de2df-328f-4303-9895-cdff048fb1ed
-Monmouth,Monmouth  NJ,3db7336c-c18a-441b-912e-e2a4408f12ea
+Monmouth,Monmouth NJ,3db7336c-c18a-441b-912e-e2a4408f12ea
 Montana,Montana,e3848467-66c0-41e5-8283-02e3586d8601
 Montana St.,Montana St,bec40585-b587-4548-93f5-b7c00b046aea
 Morehead St.,Morehead St,b7747a03-c85b-4de6-94bf-1b5b68553248
@@ -197,10 +207,13 @@ NJIT,NJIT,500d7223-ecff-494b-9539-28427156c783
 Norfolk St.,Norfolk St,a8f75c12-c4db-401f-99e3-b48209d85274
 North Carolina,North Carolina,e9ca48b2-00ba-41c0-a02b-6885a2da1ff1
 North Dakota,North Dakota,de8fc8a7-253f-4597-8a48-a0104ef226ae
+North Dakota St.,N Dakota St,984e7518-e418-45d5-9797-979b8c2085c1
 North Dakota St.,North Dakota St,984e7518-e418-45d5-9797-979b8c2085c1
+North Florida,N Florida,09920a5f-1b25-466c-b5ae-6167214f5ba9
 North Florida,North Florida,09920a5f-1b25-466c-b5ae-6167214f5ba9
 North Texas,North Texas,10f450ce-143b-4e46-8bfe-52c644b68b07
 Northeastern,Northeastern,93df9b18-e9fc-42a7-bb45-a736c203b4dc
+Northern Ariz.,Northern Arizona,1753768d-e46e-40b1-8d69-a8ae5cccec03
 Northern Ariz.,N Arizona,1753768d-e46e-40b1-8d69-a8ae5cccec03
 Northern Colo.,N Colorado,7e42fa84-68cd-47a6-b49a-18b5414d8084
 Northern Ill.,N Illinois,3f0ac618-3742-471a-9d1f-03e08f3deca2
@@ -240,11 +253,15 @@ Rider,Rider,0b73b9b9-1e29-4b14-b5d8-0405fe942e32
 Robert Morris,Robert Morris,6906e22d-92fa-40cb-8c05-ec8391ac1979
 Rutgers,Rutgers,b03bb029-4499-4a2c-9074-5071ed360b21
 Sacramento St.,CS Sacramento,1dc13b18-f9b3-4bb9-b1cf-979fcd8c2b6f
+Sacred Heart,Sacred Ht,3556d445-b3f1-467e-b150-952b32dfb150
 Sacred Heart,Sacred Heart,3556d445-b3f1-467e-b150-952b32dfb150
+Saint Francis (PA),St Francis PA,6637ac5f-59c2-4888-af34-a86d138ccfb3
 Saint Francis (PA),Saint Francis PA,6637ac5f-59c2-4888-af34-a86d138ccfb3
-Saint Joseph's,Saint Joseph's PA,f9e4261e-d11d-46c4-bd33-c7bbc94ef0e8
+Saint Joseph's,St Joseph's PA,f9e4261e-d11d-46c4-bd33-c7bbc94ef0e8
 Saint Louis,St Louis,1e42cce3-236b-4f3e-9650-2c45e6332e1e
-Saint Mary's (CA),Saint Mary's CA,b18f34af-a7f1-4659-a2e5-fc11a31cd316
+Saint Mary's (CA),St Mary's,b18f34af-a7f1-4659-a2e5-fc11a31cd316
+Saint Mary's (CA),St Mary's CA,b18f34af-a7f1-4659-a2e5-fc11a31cd316
+Saint Mary's (CA),Saint Mary's,b18f34af-a7f1-4659-a2e5-fc11a31cd316
 Saint Peter's,St Peter's,e66d7ed2-9b4c-48c8-adaa-a276793b057d
 Sam Houston St.,Sam Houston St,67322042-9c40-4dc2-b33a-4754c02ec82a
 Samford,Samford,c13f96ba-c79c-452f-9f63-3b45fae4e543
@@ -258,12 +275,16 @@ Seattle U,Seattle,7e100f63-0b32-49f6-a954-f5b7c8cf48ad
 Seton Hall,Seton Hall,aef5e386-d8e8-460c-8014-3a2f090fd988
 SFA,SF Austin,5ef64f01-86ae-4553-9834-c79cc0859eaf
 Siena,Siena,aba39ad0-6d9f-4946-bf7e-5c63bf966ce6
+SIUE,SIUE,c206712f-2298-4279-b76c-834ac42809b9
 SIUE,Edwardsville,c206712f-2298-4279-b76c-834ac42809b9
 SMU,SMU,3f4515ea-4472-46b9-ac9e-16d7d8f22a38
 South Ala.,South Alabama,10c614fa-9646-46cf-a1fb-5af96772bbb8
+South Ala.,S Alabama,10c614fa-9646-46cf-a1fb-5af96772bbb8
 South Carolina,South Carolina,1c7ec608-3b36-4cee-adac-9265e3792597
+South Carolina St.,S Carolina St,a44f8c85-7ab6-4a4e-b6f1-c69a4cabe1ed
 South Carolina St.,South Carolina St,a44f8c85-7ab6-4a4e-b6f1-c69a4cabe1ed
 South Dakota,South Dakota,c946b7ac-5159-4817-93c4-fc9495c6425b
+South Dakota St.,S Dakota St,6ef40534-5fad-4755-84de-7dcbd645d1f0
 South Dakota St.,South Dakota St,6ef40534-5fad-4755-84de-7dcbd645d1f0
 South Fla.,South Florida,55af9c69-3675-4b9b-a882-96640b782fff
 Southeast Mo. St.,SE Missouri St,6a7083ab-1832-48c0-9168-427b35adbcde
@@ -272,6 +293,7 @@ Southern California,USC,3a000455-de7c-4ca8-880e-abdce7f21da9
 Southern Ill.,S Illinois,7cdfcf92-7fe7-46f1-9b66-6912114182e6
 Southern Miss.,Southern Miss,6120ac5d-e0f2-4b28-9e6f-ee71596a7e88
 Southern U.,Southern Univ,a3b13d27-ec14-4a7d-88a2-0bc9f7b58984
+Southern Utah,S Utah,c7116621-45ed-4ab1-9ad9-dee524120569
 Southern Utah,Southern Utah,c7116621-45ed-4ab1-9ad9-dee524120569
 St. Bonaventure,St Bonaventure,22d90601-19d4-461b-a901-924d12f116ed
 St. Francis Brooklyn,St Francis NY,e19cfc47-f23f-4c64-ba29-2e6d12dc45b2
@@ -288,39 +310,51 @@ Tennessee Tech,Tennessee Tech,fe037cba-25d9-42f5-a461-61d7102c17de
 Texas,Texas,6ed15092-2670-450a-99c2-61d861e87644
 Texas A&M,Texas A&M,ef184799-d79b-49d9-a662-991eaf4044cd
 Texas Southern,TX Southern,eb157f98-0697-459c-9293-ddb162ceb28b
+Texas St.,SW Texas St,1e5dc9e4-c60d-487b-8279-dfbec9229faa
 Texas St.,Texas St,1e5dc9e4-c60d-487b-8279-dfbec9229faa
 Texas Tech,Texas Tech,f8c705b7-87d3-411a-9c8b-5124daab0469
 The Citadel,Citadel,412e7f0d-fb93-4e6e-be1f-9a4c7490d121
 Toledo,Toledo,34dd83ac-64f2-4b73-8577-899b2a46f5cc
 Towson,Towson,6f3eec09-2918-4739-a0e8-5d79e14a8332
+Troy,Troy St,6373b18c-62f6-49bc-bd4c-8959a2466516
 Troy,Troy,6373b18c-62f6-49bc-bd4c-8959a2466516
 Tulane,Tulane,399ad7fb-de60-45a6-a71f-d26e00f1a4ec
 Tulsa,Tulsa,2959bd24-7007-41ae-a3a3-abdf26888cfc
 UAB,UAB,63a8fdcf-b51b-4de3-8a57-2a6e41d362ce
 UC Davis,UC Davis,8aaad1c0-d16e-4b9f-8541-dac670addd71
 UC Irvine,UC Irvine,39d00ef7-320d-47cf-a2fa-859bc24d16b4
+UC Riverside,Cal Riverside,6b170a32-8445-4cb1-8638-724996c3094b
 UC Riverside,UC Riverside,6b170a32-8445-4cb1-8638-724996c3094b
+UC Santa Barbara,UC Santa Barbara,3b6293f3-03db-46d2-8793-248963c2d83b
 UC Santa Barbara,Santa Barbara,3b6293f3-03db-46d2-8793-248963c2d83b
 UCF,UCF,054c3e85-0552-4549-b123-7e84af6e7b6c
 UCLA,UCLA,ec0d6b67-4b16-4b50-92b2-1a651dae6b0f
 UConn,Connecticut,efba5350-79bc-47aa-a189-db177b95b491
 UMass Lowell,MA Lowell,4927ef8b-e680-4fb8-b10e-2ea3eff32eab
+UMBC,UMBC,32755362-6336-4dd3-ac34-6f72a6cc150b
 UMBC,MD Baltimore Co,32755362-6336-4dd3-ac34-6f72a6cc150b
 UMES,MD E Shore,d20216d8-161c-46e3-b8d2-92208ddf5acf
 UMKC,Missouri KC,820c8f26-cf11-4997-b2e2-19f47bd2f72f
 UNC Asheville,UNC Asheville,ad9fce12-6b1a-400c-bcbe-29d84d065fc0
 UNCG,UNC Greensboro,612f7f66-1de1-4d42-b842-9a508daab911
 UNCW,UNC Wilmington,c54279f9-3028-4663-893a-7d22482f8098
+UNI,N Iowa,2c93a75d-5449-4ec1-9ca2-1e6c812399a4
 UNI,Northern Iowa,2c93a75d-5449-4ec1-9ca2-1e6c812399a4
 UNLV,UNLV,68a3227f-677f-43b0-9a3a-cad79d0df9e2
 USC Upstate,SC Upstate,2e78bd1b-9422-491e-9c73-37cf83b0e34e
+UT Arlington,TX Arlington,7c2b372b-b5f0-466e-90cf-880beec57584
 UT Arlington,UT Arlington,7c2b372b-b5f0-466e-90cf-880beec57584
+UT Martin,Tenn Martin,9febd5fa-982f-4f40-ad1d-8e49be96cf4f
 UT Martin,TN Martin,9febd5fa-982f-4f40-ad1d-8e49be96cf4f
 Utah,Utah,0d037a5d-827a-44dd-8b70-57603d671d5d
 Utah St.,Utah St,7672ff16-8436-47e6-8546-0fb5494ec7ee
+Utah Valley,Utah Valley,4200f37c-86e0-413e-a5c4-e5edf1e272e7
 Utah Valley,Utah Val St,4200f37c-86e0-413e-a5c4-e5edf1e272e7
+UTEP,Texas-El Paso,06d15d35-4955-4fdd-83d9-32d24dbd795b
 UTEP,UTEP,06d15d35-4955-4fdd-83d9-32d24dbd795b
+UTRGV,TX Pan American,92456e1e-f48c-4385-96ab-14cb27d18726
 UTRGV,UTRGV,92456e1e-f48c-4385-96ab-14cb27d18726
+UTSA,TX San Antonio,953151f2-1e42-4cb0-a99e-202493a64dcf
 UTSA,UT San Antonio,953151f2-1e42-4cb0-a99e-202493a64dcf
 Valparaiso,Valparaiso,df3da9d7-2d2b-44e2-99e2-08c4945a203b
 Vanderbilt,Vanderbilt,72971b77-1d35-40b3-bb63-4c5b29f3d22b
@@ -338,6 +372,7 @@ Weber St.,Weber St,4743cb7c-784a-4b95-a380-5471f92f2217
 West Virginia,West Virginia,f770d3a2-221c-49ce-9c7a-680f7417fe9e
 Western Caro.,W Carolina,6bff595c-32cb-4028-837c-c7de2a2107e6
 Western Ill.,W Illinois,cc9e5424-ab3b-41ec-b2aa-7e8a73d759c6
+Western Ky.,WKU,881380da-861c-4ab6-a7d2-20699d8ea883
 Western Ky.,W Kentucky,881380da-861c-4ab6-a7d2-20699d8ea883
 Western Mich.,W Michigan,f2164f01-2cbc-4967-bb1c-93656d790921
 Wichita St.,Wichita St,f38b58de-3273-4723-a78b-2f918e9aa2d5
