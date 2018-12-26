@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6755b8cd-0948-4fa3-9245-29004511c592" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/join_with_kaggle_id.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/best_lr_777_498-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../.ipynb_checkpoints/best_lr_777_498-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/computer_rankings_eda-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../.ipynb_checkpoints/computer_rankings_eda-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/combined_seasons.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/combined_seasons.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/rankings_2005.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/rankings_2005.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../massey_school_names_diff.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../best_lr_777_498.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../best_lr_777_498.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../computer_rankings_eda.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../computer_rankings_eda.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +26,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="4" column="8" selection-start-line="4" selection-end-line="4" selection-end-column="9" />
+            <state relative-caret-position="1663">
+              <caret line="291" column="20" selection-start-line="291" selection-start-column="20" selection-end-line="291" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -34,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/combine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="323">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -46,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/join_with_kaggle_id.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
+            <state relative-caret-position="425">
               <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
@@ -58,7 +62,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common_ratings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="102">
               <caret line="7" column="25" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="32" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
@@ -82,18 +86,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/common_ratings.py" />
         <option value="$PROJECT_DIR$/combine.py" />
         <option value="$PROJECT_DIR$/join_with_kaggle_id.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="297" />
-    <option name="y" value="733" />
-    <option name="width" value="3863" />
-    <option name="height" value="2188" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="3832" />
+    <option name="y" value="494" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -101,6 +105,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -112,12 +117,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pycharm_project/main.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
@@ -192,6 +196,9 @@
       <module name="WebScrape" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -233,6 +240,9 @@
       <module name="WebScrape" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -271,18 +281,19 @@
       <workItem from="1545262677277" duration="45339000" />
       <workItem from="1545401416595" duration="7266000" />
       <workItem from="1545488378007" duration="9858000" />
-      <workItem from="1545511981057" duration="673000" />
+      <workItem from="1545511981057" duration="1264000" />
+      <workItem from="1545671807297" duration="2468000" />
+      <workItem from="1545677502764" duration="3920000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65966000" />
+    <option name="totallyTimeSpent" value="72945000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="170" y="419" width="2207" height="1250" extended-state="0" />
-    <editor active="true" />
+    <frame x="3832" y="494" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12889716" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14978679" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -297,13 +308,13 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3277623" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.23949955" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.29035753" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49823737" visible="true" weight="0.48673803" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49618322" weight="0.5575693" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" x="0" y="0" width="227" height="335" id="Documentation" order="5" sideWeight="0.5017626" side_tool="true" visible="true" weight="0.48673803" />
+      <window_info anchor="right" x="0" y="0" width="227" height="335" id="Documentation" order="5" sideWeight="0.5038168" side_tool="true" visible="true" weight="0.1359275" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,20 +464,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common_ratings.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="32" />
+        <state relative-caret-position="1663">
+          <caret line="291" column="20" selection-start-line="291" selection-start-column="20" selection-end-line="291" selection-end-column="20" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/combine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="323">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -475,7 +486,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/join_with_kaggle_id.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
+        <state relative-caret-position="425">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
@@ -483,10 +494,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/common_ratings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="4" column="8" selection-start-line="4" selection-end-line="4" selection-end-column="9" />
+        <state relative-caret-position="102">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

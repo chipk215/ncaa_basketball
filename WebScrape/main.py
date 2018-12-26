@@ -243,7 +243,7 @@ def run_main():
     drop_cols_2016 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'D1A',
                       'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
 
-    drop_cols_2015 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3',
+    drop_cols_2015 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'D1A',
                       'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
 
     drop_cols_2014 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'D1A',
