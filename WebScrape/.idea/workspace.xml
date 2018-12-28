@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6755b8cd-0948-4fa3-9245-29004511c592" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/best_lr_777_498-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../.ipynb_checkpoints/best_lr_777_498-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/computer_rankings_eda-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../.ipynb_checkpoints/computer_rankings_eda-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/Tournament_Model_AdaBoost-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EDA/.ipynb_checkpoints/Opposition_Plots-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../EDA/.ipynb_checkpoints/Opposition_Plots-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EDA/Opposition_Plots.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../EDA/Opposition_Plots.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tournament_Model_AdaBoost.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../best_lr_777_498.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../best_lr_777_498.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../computer_rankings_eda.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../computer_rankings_eda.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../massey_seasons_with_id.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py_utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py_utils/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,49 +25,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
+        <entry file="file://$PROJECT_DIR$/../py_utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1663">
-              <caret line="291" column="20" selection-start-line="291" selection-start-column="20" selection-end-line="291" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/combine.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/join_with_kaggle_id.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common_ratings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="408">
+              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
             </state>
           </provider>
         </entry>
@@ -90,14 +52,15 @@
         <option value="$PROJECT_DIR$/combine.py" />
         <option value="$PROJECT_DIR$/join_with_kaggle_id.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/../py_utils/utils.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4017" />
-    <option name="y" value="935" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="28" />
+    <option name="y" value="341" />
+    <option name="width" value="3385" />
+    <option name="height" value="1833" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -105,7 +68,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -117,6 +79,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -134,6 +97,11 @@
         <option name="myWorkingDirectory" value="$PROJECT_DIR$" />
       </console-settings>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\CHIPK\Developer\NCAA Data\py_utils" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -284,16 +252,18 @@
       <workItem from="1545511981057" duration="1264000" />
       <workItem from="1545671807297" duration="2468000" />
       <workItem from="1545677502764" duration="3920000" />
+      <workItem from="1545955612442" duration="1668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72945000" />
+    <option name="totallyTimeSpent" value="74613000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3832" y="494" width="1936" height="1056" extended-state="7" />
+    <frame x="16" y="195" width="1934" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14978679" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15138593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -308,13 +278,13 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3277623" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.29035753" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.29257643" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" sideWeight="0.49618322" weight="0.5575693" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" x="0" y="0" width="227" height="335" id="Documentation" order="5" sideWeight="0.5038168" side_tool="true" visible="true" weight="0.1359275" />
+      <window_info anchor="right" x="0" y="0" width="227" height="335" id="Documentation" order="5" sideWeight="0.5038168" side_tool="true" weight="0.13539445" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,8 +436,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1663">
-          <caret line="291" column="20" selection-start-line="291" selection-start-column="20" selection-end-line="291" selection-end-column="20" />
+        <state relative-caret-position="391">
+          <caret line="287" column="27" lean-forward="true" selection-start-line="286" selection-start-column="3" selection-end-line="287" selection-end-column="27" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -501,6 +471,13 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../py_utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
         </state>
       </provider>
     </entry>
