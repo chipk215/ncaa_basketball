@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6755b8cd-0948-4fa3-9245-29004511c592" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/massey_rankings-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../.ipynb_checkpoints/massey_rankings-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,8 +52,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="3799" />
-    <option name="y" value="613" />
+    <option name="x" value="3833" />
+    <option name="y" value="502" />
     <option name="width" value="1934" />
     <option name="height" value="1047" />
   </component>
@@ -246,15 +247,15 @@
       <workItem from="1545511981057" duration="1264000" />
       <workItem from="1545671807297" duration="2468000" />
       <workItem from="1545677502764" duration="3920000" />
-      <workItem from="1545955612442" duration="2403000" />
+      <workItem from="1545955612442" duration="3000000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75348000" />
+    <option name="totallyTimeSpent" value="75945000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3799" y="613" width="1934" height="1047" extended-state="0" />
+    <frame x="3833" y="502" width="1934" height="1047" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15154749" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
