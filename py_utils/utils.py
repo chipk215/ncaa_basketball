@@ -215,6 +215,116 @@ def negate_loser(x):
     return x
 
 
+class Feature_Dictionary:
+    def __init__(self):
+        self.int_format_string = "{0:<20s}{1:15d}{2:>35d}{3:>15s}{4:>5s}"
+        self.float_format_string = "{0:<20s}{1:17.2f}{2:>35.2f}{3:>13s}{4:>5s}"
+        self.feature_dictionary = {
+            #  name, stat evaluation function, format of print string, stat alias, stat percent flag
+            'seed': ('LOW', self.int_format_string, 'Seed', False),
+            'sag': ('LOW', self.float_format_string, 'SAG', False),
+            'wlk': ('LOW', self.float_format_string, 'WLK', False),
+            'wol': ('LOW', self.float_format_string, 'WOL', False),
+            'rth': ('LOW', self.float_format_string, 'RTH', False),
+            'col': ('LOW', self.float_format_string, 'COL', False),
+            'pom': ('LOW', self.float_format_string, 'POM', False),
+            'dol': ('LOW', self.float_format_string, 'DOL', False),
+            'rpi': ('LOW', self.float_format_string, 'RPI', False),
+            'mor': ('LOW', self.float_format_string, 'MOR', False),
+            'opp_pts_avg': ('LOW', self.float_format_string, 'Allow PPG', False),
+            'allow_fg_pct': ('LOW', self.float_format_string, 'Allow FG %', True),
+            'allow_off_rebs_avg': ('LOW', self.float_format_string, 'Allow Off Rb Avg', False),
+            'allow_def_rebs_avg': ('LOW', self.float_format_string, 'Allow Def Rb Avg', False),
+            'allow_ft_att_avg': ('LOW', self.float_format_string, 'Allow FT ATT Avg', False),
+            'to_avg': ('LOW', self.float_format_string, 'Turnover Avg', False),
+            'to_net_avg': ('LOW', self.float_format_string, 'Net Turnover Avg', False),
+            'srs': ('HIGH', self.float_format_string, 'SRS', False),
+            'sos': ('HIGH', self.float_format_string, 'SOS', False),
+            'pts_avg': ('HIGH', self.float_format_string, 'PPG', False),
+            'poss_avg': ('HIGH', self.float_format_string, 'Poss Avg', False),
+            'fg_pct': ('HIGH', self.float_format_string, 'FG %', True),
+            'off_rebs_avg': ('HIGH', self.float_format_string, 'Off Rb Avg', False),
+            'def_rebs_avg': ('HIGH', self.float_format_string, 'Def Rb Avg', False),
+            'ft_att_avg': ('HIGH', self.float_format_string, 'FT ATT Avg', False),
+            'ft_pct': ('HIGH', self.float_format_string, 'FT %', True),
+            'steal_avg': ('HIGH', self.float_format_string, 'Takeaway Avg', False),
+            'margin_victory_avg': ('HIGH', self.float_format_string, 'Margin Victory Avg', False),
+            'win_pct': ('HIGH', self.float_format_string, 'Win %', True),
+            'off_rating': ('HIGH', self.float_format_string, 'Off Rating', False)
+        }
+
+    @staticmethod
+    def high_supporting_statistic(stat_t, stat_o, game_result):
+        cond_1 = (game_result == -1) & (stat_t > stat_o)
+        cond_2 = (game_result == 1) & (stat_t < stat_o)
+        return not (cond_1 | cond_2)
+
+    @staticmethod
+    def low_supporting_statistic(stat_t, stat_o, game_result):
+        cond_1 = (game_result == -1) & (stat_t < stat_o)
+        cond_2 = (game_result == 1) & (stat_t > stat_o)
+        return not (cond_1 | cond_2)
+
+    def print_game_info(self, test_games, season, round_, team):
+        stat_dict = {}
+        supports_outcome_count = 0
+        stat_count = 0
+        game_record = get_tournament_record(test_games, season, round_, team)
+        game_record = game_record.iloc[0]
+        opp_team = game_record['team_o']
+        game_result = game_record['game_result']
+
+        # print the table header
+        print("{0:>45s}{1:>27s}{2:>25s}".format(team[0:25], opp_team[0:25], "Stat Supports Winner"))
+
+        for key, value in self.feature_dictionary.items():
+            team_stat = key + '_t'
+            opp_stat = key + '_o'
+            stat_t = game_record[team_stat]
+            stat_o = game_record[opp_stat]
+            support_flag = self.does_feature_support_win(key, stat_t, stat_o, game_result)
+
+            if value[3]:
+                stat_t = 100 * stat_t
+                stat_o = 100 * stat_o
+
+            hint = "(L)"
+            if value[0] == 'HIGH':
+                hint = "(H)"
+
+            print_string = value[1].format(value[2], stat_t, stat_o, str(support_flag), hint)
+            stat_count += 1
+            if support_flag:
+                supports_outcome_count += 1
+
+            stat_dict[print_string] = support_flag
+
+        sorted_dict = sorted(stat_dict.items(), key=operator.itemgetter(1), reverse=True)
+        for k in sorted_dict:
+            print(k[0])
+
+        if game_record['top_conf'] == 1:
+            print('\n\nTop Conference= ', team)
+        elif game_record['top_conf'] == -1:
+            print('\n\nTop Conference= ', opp_team)
+
+        if game_record['game_result'] == 1:
+            print('\n', team, "Wins.")
+        else:
+            print('\n', opp_team, "Wins.")
+
+        print('\nSupporting Stat Count=', supports_outcome_count, ' out of', stat_count, ' stats.')
+        print('\n\n')
+
+        return sorted_dict
+
+    def does_feature_support_win(self, feature_label, stat_t, stat_o, game_result):
+        if self.feature_dictionary[feature_label][0] == 'LOW':
+            return self.low_supporting_statistic(stat_t, stat_o, game_result)
+        else:
+            return self.high_supporting_statistic(stat_t, stat_o, game_result)
+
+
 def hello():
     print("Hello")
 
