@@ -325,6 +325,21 @@ class Feature_Dictionary:
             return self.high_supporting_statistic(stat_t, stat_o, game_result)
 
 
+def get_supporting_features(row, feature_dictionary, feature_list):
+    supporting_features = []
+    for feature in feature_list:
+        if feature.startswith('delta_'):
+            feature_name = feature[6:]
+            feature_t = feature_name + '_t'
+            feature_o = feature_name + '_o'
+            if feature_dictionary.does_feature_support_win(feature_name,
+                                                           row[feature_t],
+                                                           row[feature_o],
+                                                           row['game_result']):
+                supporting_features.append(feature_name)
+    return supporting_features
+
+
 def hello():
     print("Hello")
 
