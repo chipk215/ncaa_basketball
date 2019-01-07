@@ -278,27 +278,30 @@ class Feature_Dictionary:
         # print the table header
         print("{0:>45s}{1:>27s}{2:>25s}".format(team[0:25], opp_team[0:25], "Stat Supports Winner"))
 
+        test_games_features = set(list(test_games))
+
         for key, value in self.feature_dictionary.items():
             team_stat = key + '_t'
             opp_stat = key + '_o'
-            stat_t = game_record[team_stat]
-            stat_o = game_record[opp_stat]
-            support_flag = self.does_feature_support_win(key, stat_t, stat_o, game_result)
+            if team_stat in test_games_features:
+                stat_t = game_record[team_stat]
+                stat_o = game_record[opp_stat]
+                support_flag = self.does_feature_support_win(key, stat_t, stat_o, game_result)
 
-            if value[3]:
-                stat_t = 100 * stat_t
-                stat_o = 100 * stat_o
+                if value[3]:
+                    stat_t = 100 * stat_t
+                    stat_o = 100 * stat_o
 
-            hint = "(L)"
-            if value[0] == 'HIGH':
-                hint = "(H)"
+                hint = "(L)"
+                if value[0] == 'HIGH':
+                    hint = "(H)"
 
-            print_string = value[1].format(value[2], stat_t, stat_o, str(support_flag), hint)
-            stat_count += 1
-            if support_flag:
-                supports_outcome_count += 1
+                print_string = value[1].format(value[2], stat_t, stat_o, str(support_flag), hint)
+                stat_count += 1
+                if support_flag:
+                    supports_outcome_count += 1
 
-            stat_dict[print_string] = support_flag
+                stat_dict[print_string] = support_flag
 
         sorted_dict = sorted(stat_dict.items(), key=operator.itemgetter(1), reverse=True)
         for k in sorted_dict:
