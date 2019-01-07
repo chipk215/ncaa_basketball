@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6755b8cd-0948-4fa3-9245-29004511c592" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../py_utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py_utils/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/sr_summaries_kaggle_id_no_opp.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/sr_summaries_kaggle_id_no_opp.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-Delta_No_Opp_Stats-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-Delta_No_Opp_Stats-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_LR-Delta_No_Opp_Stats.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_LR-Delta_No_Opp_Stats.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL/import_srcbb_basic_no_opponent.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL/import_srcbb_basic_no_opponent.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,11 +56,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="4215" />
-    <option name="y" value="587" />
-    <option name="width" value="1104" />
-    <option name="height" value="962" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-251" />
+    <option name="y" value="154" />
+    <option name="width" value="3838" />
+    <option name="height" value="2078" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -255,7 +258,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96499000" />
+    <option name="totallyTimeSpent" value="97100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="100" width="2193" height="1187" extended-state="0" />

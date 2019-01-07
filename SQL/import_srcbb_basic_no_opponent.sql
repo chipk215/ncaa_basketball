@@ -72,7 +72,7 @@ CREATE TABLE #ImportSeason(
 	FT	INT NOT NULL,
 	FTA	INT NOT NULL,
 	ft_pct	FLOAT NOT NULL,
-	ORB	INT  NOT NULL,
+	ORB	INT,
 	TRB	INT NOT NULL,
 	AST	INT NOT NULL,
 	STL	INT NOT NULL,
@@ -83,7 +83,7 @@ CREATE TABLE #ImportSeason(
 GO
 
 BULK INSERT #ImportSeason
-FROM 'C:\Users\CHIPK\Developer\NCAA Data\import_data\SRCBB_basic_2008.csv'
+FROM 'C:\Users\CHIPK\Developer\NCAA Data\import_data\SRCBB_basic_2007.csv'
 WITH(
 FIELDTERMINATOR = ',',
 ROWTERMINATOR = '\n',
@@ -139,7 +139,7 @@ GO
 
 
 
-DELETE FROM [SRCBB].[dbo].[team_summaries] WHERE (School = 'Centenary (LA)') AND (Season=2010)
+DELETE FROM [SRCBB].[dbo].[team_summaries] WHERE (School = 'Centenary (LA)') 
 
 SELECT *
 FROM [SRCBB].[dbo].[team_summaries] 
