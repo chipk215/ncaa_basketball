@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6755b8cd-0948-4fa3-9245-29004511c592" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-Delta-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-Delta-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_LR-Delta.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_LR-Delta.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_LR.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_LR.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/best_lr_777_498-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_AdaBoost-Delta-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_AdaBoost-Delta-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_AdaBoost-Delta.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_AdaBoost-Delta.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_RF_Delta.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_RF_Delta.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../best_lr_777_498.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../py_utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py_utils/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../py_utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="341" lean-forward="true" selection-start-line="341" selection-end-line="341" />
+            <state relative-caret-position="513">
+              <caret line="266" column="23" selection-start-line="266" selection-start-column="23" selection-end-line="266" selection-end-column="23" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -57,11 +59,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="4215" />
-    <option name="y" value="587" />
-    <option name="width" value="1104" />
-    <option name="height" value="962" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="89" />
+    <option name="y" value="175" />
+    <option name="width" value="3838" />
+    <option name="height" value="2078" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -254,15 +256,15 @@
       <workItem from="1545671807297" duration="2468000" />
       <workItem from="1545677502764" duration="3920000" />
       <workItem from="1545955612442" duration="3000000" />
-      <workItem from="1546211212248" duration="19717000" />
+      <workItem from="1546211212248" duration="21726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95662000" />
+    <option name="totallyTimeSpent" value="97671000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4215" y="587" width="1104" height="962" extended-state="0" />
+    <frame x="51" y="100" width="2193" height="1187" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.21627732" />
@@ -502,8 +504,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../py_utils/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="341" lean-forward="true" selection-start-line="341" selection-end-line="341" />
+        <state relative-caret-position="513">
+          <caret line="266" column="23" selection-start-line="266" selection-start-column="23" selection-end-line="266" selection-end-column="23" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

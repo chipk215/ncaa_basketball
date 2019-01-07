@@ -255,15 +255,16 @@ class Feature_Dictionary:
 
     @staticmethod
     def high_supporting_statistic(stat_t, stat_o, game_result):
-        cond_1 = (game_result == -1) & (stat_t > stat_o)
-        cond_2 = (game_result == 1) & (stat_t < stat_o)
-        return not (cond_1 | cond_2)
+        if game_result == -1:
+            return stat_o > stat_t
+
+        return stat_t > stat_o
 
     @staticmethod
     def low_supporting_statistic(stat_t, stat_o, game_result):
-        cond_1 = (game_result == -1) & (stat_t < stat_o)
-        cond_2 = (game_result == 1) & (stat_t > stat_o)
-        return not (cond_1 | cond_2)
+        if game_result == -1:
+            return stat_o < stat_t
+        return stat_t < stat_o
 
     def print_game_info(self, test_games, season, round_, team):
         stat_dict = {}
