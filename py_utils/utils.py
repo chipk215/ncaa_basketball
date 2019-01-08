@@ -41,6 +41,32 @@ def conf_compare(team_conf, opp_conf, top_tournament_conferences_list):
         return -1
 
 
+def assign_top_conference_team(top_conference):
+    if top_conference == 1:
+        return 1
+    return 0
+
+
+def assign_top_conference_opp(top_conference):
+    if top_conference == -1:
+        return 1
+    return 0
+
+
+def compute_top_conference(games_df, top_tournament_conferences_list):
+    games_df['top_conf'] = games_df.apply(lambda row: conf_compare(row.conf_name_t, row.conf_name_o,
+                                                                   top_tournament_conferences_list), axis=1)
+    games_df['top_conf_t'] = 0
+    games_df['top_conf_o'] = 0
+
+    games_df['top_conf_t'] = games_df.apply(lambda row: assign_top_conference_team(row.top_conf), axis=1)
+    games_df['top_conf_o'] = games_df.apply(lambda row: assign_top_conference_opp(row.top_conf), axis=1)
+
+    games_df.drop(columns=['top_conf'], inplace=True)
+
+    return games_df
+
+
 def join_feature_name_with_importance_value(features, importances):
     """
     Join via a list of tuples, feature names with their importance values
@@ -307,10 +333,11 @@ class Feature_Dictionary:
         for k in sorted_dict:
             print(k[0])
 
-        if game_record['top_conf'] == 1:
-            print('\n\nTop Conference= ', team)
-        elif game_record['top_conf'] == -1:
-            print('\n\nTop Conference= ', opp_team)
+        if 'top_conf_t' in test_games_features:
+            if game_record['top_conf_t'] == 1:
+                print('\n\nTop Conference= ', team)
+            elif game_record['top_conf_o'] == 1:
+                print('\n\nTop Conference= ', opp_team)
 
         if game_record['game_result'] == 1:
             print('\n', team, "Wins.")
