@@ -271,7 +271,8 @@ def run_main():
     plot_missed_predictions_df = pd.melt(plot_missed_predictions_df, id_vars='game_index',
                                          var_name='Features Supporting Outcome')
     # plot_missed_predictions_df.head()
-    # m_plot = sns.barplot(x='game_index', y='value', hue='Features Supporting Outcome', data=plot_missed_predictions_df)
+    # m_plot = sns.barplot(x='game_index', y='value', hue='Features Supporting Outcome',
+    #                      data=plot_missed_predictions_df)
     # plt.title("Percentage Of Features Consistent With Incorrectly Predicted Game Outcomes")
     # plt.ylabel('Percentage')
     # plt.xlabel('Game Index')
@@ -289,11 +290,19 @@ def run_main():
     class_team_votes = 0
     class_opp_votes = 0
 
+    label_dict = {}
+
     estimator_stubs = []
     for stub_estimator in bdt.estimators_:
         stub_tree = stub_estimator.tree_
         stub_feature_index = stub_tree.feature[0]
         stub_feature = missed_game.columns[stub_feature_index]
+
+        if stub_feature in label_dict:
+            label_dict[stub_feature] += 1
+        else:
+            label_dict[stub_feature] = 1
+
         threshold_value = stub_tree.threshold[0]
         test_value = missed_game.iloc[0, stub_feature_index]
         left_child_node = stub_tree.children_left[0]
@@ -306,7 +315,8 @@ def run_main():
                                                                                       left_values[0], left_values[1])
 
         right_string = "Right: Samples= {0},  Percent Split= {1:5.3f}, {2:5.3f}".format(node_samples[right_child_node],
-                                                                                        right_values[0], right_values[1])
+                                                                                        right_values[0],
+                                                                                        right_values[1])
 
         if test_value <= threshold_value:
             # choose left node
@@ -352,6 +362,11 @@ def run_main():
 
     print("Class Team Votes= ", class_team_votes)
     print("Class Opp Votes= ", class_opp_votes)
+    print()
+    print("Number of features in tree stumps= ", len(label_dict))
+    for key, value in label_dict.items():
+        print('Feature: ', key, ' Count= ', value)
+
     return
 
 
