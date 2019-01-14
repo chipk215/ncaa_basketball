@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f74b316-66b4-47ae-8bdf-8dac0c4304d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_AdaBoost-Delta_No_Opp_Stats-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_AdaBoost-Delta_No_Opp_Stats-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/Source.gv" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Source.gv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/Source.gv.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Source.gv.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EDA/Opposition_Plots.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../EDA/Opposition_Plots.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_AdaBoost-Delta_No_Opp_Stats.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_AdaBoost-Delta_No_Opp_Stats.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pycharm_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pycharm_project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py_utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py_utils/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,14 +18,47 @@
     <SUITE FILE_PATH="coverage/Tree_Stub_Analyzer$Tree_Stub_Analyzer.coverage" NAME="Tree_Stub_Analyzer Coverage Results" MODIFIED="1547063312220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1692">
-              <caret line="224" lean-forward="true" selection-start-line="224" selection-end-line="224" />
+            <state relative-caret-position="331">
+              <caret line="375" lean-forward="true" selection-start-line="375" selection-end-line="375" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/pandas/core/indexing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="617">
+              <caret line="1784" selection-start-line="1784" selection-end-line="1784" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="70" column="31" lean-forward="true" selection-start-line="66" selection-end-line="70" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../py_utils/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1597">
+              <caret line="398" lean-forward="true" selection-start-line="398" selection-end-line="398" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,15 +80,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/../py_utils/utils.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="3881" />
-    <option name="y" value="595" />
-    <option name="width" value="1288" />
-    <option name="height" value="871" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="3803" />
+    <option name="y" value="537" />
+    <option name="width" value="1944" />
+    <option name="height" value="1017" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -82,7 +113,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pycharm_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../py_utils/utils.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
@@ -152,53 +183,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547052739215</updated>
-      <workItem from="1547052741342" duration="19961000" />
+      <workItem from="1547052741342" duration="22849000" />
+      <workItem from="1547224569071" duration="8328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19961000" />
+    <option name="totallyTimeSpent" value="31177000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3881" y="595" width="1288" height="871" extended-state="1" />
+    <frame x="3803" y="537" width="1944" height="1017" extended-state="0" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16454352" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Python Console" visible="true" weight="0.48915988" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39925718" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32961932" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.40837103" />
+      <window_info anchor="right" x="0" y="0" width="436" height="817" id="Documentation" side_tool="true" weight="0.3301486" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../py_utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="190" lean-forward="true" selection-end-line="379" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_umd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -208,18 +231,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="267" column="23" lean-forward="true" selection-start-line="267" selection-start-column="23" selection-end-line="267" selection-end-column="23" />
+        <state relative-caret-position="119">
+          <caret line="70" column="31" lean-forward="true" selection-start-line="66" selection-end-line="70" selection-end-column="31" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../py_utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1597">
+          <caret line="398" lean-forward="true" selection-start-line="398" selection-end-line="398" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/pandas/core/indexing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="1784" selection-start-line="1784" selection-end-line="1784" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1692">
-          <caret line="224" lean-forward="true" selection-start-line="224" selection-end-line="224" />
+        <state relative-caret-position="331">
+          <caret line="375" lean-forward="true" selection-start-line="375" selection-end-line="375" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

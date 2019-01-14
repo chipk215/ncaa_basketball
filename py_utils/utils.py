@@ -371,6 +371,32 @@ def get_supporting_features(row, feature_dictionary, feature_list):
     return supporting_features
 
 
+def compute_game_data(tourney_data, teams):
+    game_data = tourney_data.join(teams, on='win_team_id', how='left')
+    game_data.rename(columns={'kaggle_team_id': 'win_kaggle_team_id', 'conf_name': 'win_conf_name'}, inplace=True)
+    game_data = game_data.join(teams, on='lose_team_id', how='left')
+    game_data.rename(columns={'kaggle_team_id': 'lose_kaggle_team_id', 'conf_name': 'lose_conf_name'}, inplace=True)
+    return game_data
+
+
+def implement_top_conference_feature(tourney_data, teams, game_data, tourney_comp_ratings):
+
+    games_won_conf = game_data.groupby('win_conf_name').size().reset_index(name='count').sort_values(by=['count'],
+                                                                                                     ascending=False)
+    games_won_conf['percent'] = 100 * games_won_conf['count'] / games_won_conf['count'].sum()
+    games_won_conf['cum_percent'] = games_won_conf['percent'].cumsum()
+    top_tournament_conferences_list = games_won_conf[games_won_conf['cum_percent'] <= 85]['win_conf_name'].tolist()
+
+    return compute_top_conference(tourney_comp_ratings, top_tournament_conferences_list)
+
+
+def implement_seed_threshold_feature(tourney_comp_ratings):
+    # Upsets occur less than 30% of the time when seeding deltas are more than 6
+    tourney_comp_ratings['upset_seed_threshold'] = tourney_comp_ratings.apply(
+        lambda row: abs(row.seed_t - row.seed_o) > 6, axis=1).astype(int)
+    return tourney_comp_ratings
+
+
 def hello():
     print("Hello")
 

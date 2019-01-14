@@ -225,7 +225,7 @@ def run_main():
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=5)
 
-    number_estimators = 301
+    number_estimators = 501
     bdt = AdaBoostClassifier(DecisionTreeClassifier(max_depth=1), algorithm="SAMME.R", n_estimators=number_estimators,
                              learning_rate=1)
 
@@ -281,9 +281,10 @@ def run_main():
     print("Missed Predictions with greater than 50% feature support")
     print(plot_missed_predictions_df[plot_missed_predictions_df['value'] > 50])
 
-    # analyze game index 417
-    print(missed_predictions.loc[417])
-    missed_game = X.loc[417].to_frame().T
+    # analyze game index 246
+    game_index = 246
+    print(missed_predictions.loc[game_index])
+    missed_game = X.loc[game_index].to_frame().T
 
     staged_predictions = bdt.staged_predict(missed_game)
 
@@ -311,28 +312,28 @@ def run_main():
         right_values = stub_tree.value[right_child_node][0]
         node_samples = stub_tree.n_node_samples
         test_string = "Test: {0} ({1:6.3f}) <= {2:6.3f}".format(stub_feature, test_value, threshold_value)
-        left_string = "Left: Samples= {0},  Percent Split= {1:5.3f}, {2:5.3f}".format(node_samples[left_child_node],
-                                                                                      left_values[0], left_values[1])
+        left_string = "Left: Samples= {0},  Values= {1:5.3f}, {2:5.3f}".format(node_samples[left_child_node],
+                                                                               left_values[0], left_values[1])
 
-        right_string = "Right: Samples= {0},  Percent Split= {1:5.3f}, {2:5.3f}".format(node_samples[right_child_node],
-                                                                                        right_values[0],
-                                                                                        right_values[1])
+        right_string = "Right: Samples= {0},  Values= {1:5.3f}, {2:5.3f}".format(node_samples[right_child_node],
+                                                                                 right_values[0],
+                                                                                 right_values[1])
 
         if test_value <= threshold_value:
             # choose left node
             if left_values[0] >= left_values[1]:
-                result_string = "Result: Left --> Choose Class -1"
+                result_string = "Result: Left --> Choose Class -1 --> Opp Team Wins"
                 class_opp_votes += 1
             else:
-                result_string = "Result: Left --> Choose Class 1"
+                result_string = "Result: Left --> Choose Class 1  --> Team Wins"
                 class_team_votes +=1
         else:
             # choose right node
             if right_values[0] >= right_values[1]:
-                result_string = "Result: Right --> Choose Class -1"
+                result_string = "Result: Right --> Choose Class -1 --> Opp Team Wins"
                 class_opp_votes += 1
             else:
-                result_string = "Result: Right --> Choose Class 1"
+                result_string = "Result: Right --> Choose Class 1 --> Team Wins"
                 class_team_votes += 1
 
         if next(staged_predictions) == 1:
