@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80101d2c-0263-46dc-9f4c-956ec0b2e23b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_AdaBoost-Delta_No_Opp_Stats.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_AdaBoost-Delta_No_Opp_Stats.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../How_To_Import_SRCBB_Data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-Delta_No_Opp_Stats-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-Delta_No_Opp_Stats-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_LR-Delta_No_Opp_Stats.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_LR-Delta_No_Opp_Stats.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tree_Stub_Analyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tree_Stub_Analyzer/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="14" lean-forward="true" selection-start-line="31" selection-end-line="32" selection-end-column="14" />
+            <state relative-caret-position="510">
+              <caret line="32" column="14" selection-start-line="31" selection-end-line="32" selection-end-column="14" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -133,8 +135,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1230" />
-    <option name="y" value="652" />
+    <option name="x" value="1228" />
+    <option name="y" value="651" />
     <option name="width" value="1939" />
     <option name="height" value="938" />
   </component>
@@ -158,6 +160,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -174,7 +177,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,16 +327,17 @@
       <workItem from="1545240583851" duration="26000" />
       <workItem from="1547052245436" duration="23000" />
       <workItem from="1547053402686" duration="1226000" />
+      <workItem from="1547584598769" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46660000" />
+    <option name="totallyTimeSpent" value="46675000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="703" y="373" width="1108" height="536" extended-state="0" />
+    <frame x="702" y="372" width="1108" height="536" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1904762" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19428572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -355,7 +358,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" sideWeight="0.498366" weight="0.8768657" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" x="0" y="0" width="229" height="499" id="Documentation" order="5" sideWeight="0.501634" side_tool="true" weight="0.26651162" />
+      <window_info anchor="right" x="0" y="0" width="229" height="499" id="Documentation" order="5" sideWeight="0.501634" side_tool="true" visible="true" weight="0.2657143" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,8 +531,8 @@
     <entry file="file://$PROJECT_DIR$/game_statistic_check.py" />
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="14" lean-forward="true" selection-start-line="31" selection-end-line="32" selection-end-column="14" />
+        <state relative-caret-position="510">
+          <caret line="32" column="14" selection-start-line="31" selection-end-line="32" selection-end-column="14" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
