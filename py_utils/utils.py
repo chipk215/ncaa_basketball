@@ -9,21 +9,38 @@ from sklearn.metrics import log_loss
 from sklearn.model_selection import cross_val_score
 
 
-def display_confusion_matrix(y_test, y_pred):
-    cnf_matrix = metrics.confusion_matrix(y_test, y_pred)
-    class_names = [0, 1]
-    fig, ax = plt.subplots()
-    tick_marks = np.arange(len(class_names))
-    plt.xticks(tick_marks, class_names)
-    plt.yticks(tick_marks, class_names)
-    # create heatmap
-    sns.heatmap(pd.DataFrame(cnf_matrix), annot=True, cmap="YlGnBu", fmt='g')
-    ax.xaxis.set_label_position("top")
-    plt.tight_layout()
-    plt.title('Confusion matrix', y=1.1)
-    plt.ylabel('Actual label')
-    plt.xlabel('Predicted label')
-    return cnf_matrix
+def assign_top_conference_team(top_conference):
+    if top_conference == 1:
+        return 1
+    return 0
+
+
+def assign_top_conference_opp(top_conference):
+    if top_conference == -1:
+        return 1
+    return 0
+
+
+def compute_game_data(tourney_data, teams):
+    game_data = tourney_data.join(teams, on='win_team_id', how='left')
+    game_data.rename(columns={'kaggle_team_id': 'win_kaggle_team_id', 'conf_name': 'win_conf_name'}, inplace=True)
+    game_data = game_data.join(teams, on='lose_team_id', how='left')
+    game_data.rename(columns={'kaggle_team_id': 'lose_kaggle_team_id', 'conf_name': 'lose_conf_name'}, inplace=True)
+    return game_data
+
+
+def compute_top_conference(games_df, top_tournament_conferences_list):
+    games_df['top_conf'] = games_df.apply(lambda row: conf_compare(row.conf_name_t, row.conf_name_o,
+                                                                   top_tournament_conferences_list), axis=1)
+    games_df['top_conf_t'] = 0
+    games_df['top_conf_o'] = 0
+
+    games_df['top_conf_t'] = games_df.apply(lambda row: assign_top_conference_team(row.top_conf), axis=1)
+    games_df['top_conf_o'] = games_df.apply(lambda row: assign_top_conference_opp(row.top_conf), axis=1)
+
+    games_df.drop(columns=['top_conf'], inplace=True)
+
+    return games_df
 
 
 # Compare the conferences of two teams playing in a game.
@@ -41,30 +58,21 @@ def conf_compare(team_conf, opp_conf, top_tournament_conferences_list):
         return -1
 
 
-def assign_top_conference_team(top_conference):
-    if top_conference == 1:
-        return 1
-    return 0
-
-
-def assign_top_conference_opp(top_conference):
-    if top_conference == -1:
-        return 1
-    return 0
-
-
-def compute_top_conference(games_df, top_tournament_conferences_list):
-    games_df['top_conf'] = games_df.apply(lambda row: conf_compare(row.conf_name_t, row.conf_name_o,
-                                                                   top_tournament_conferences_list), axis=1)
-    games_df['top_conf_t'] = 0
-    games_df['top_conf_o'] = 0
-
-    games_df['top_conf_t'] = games_df.apply(lambda row: assign_top_conference_team(row.top_conf), axis=1)
-    games_df['top_conf_o'] = games_df.apply(lambda row: assign_top_conference_opp(row.top_conf), axis=1)
-
-    games_df.drop(columns=['top_conf'], inplace=True)
-
-    return games_df
+def display_confusion_matrix(y_test, y_pred):
+    cnf_matrix = metrics.confusion_matrix(y_test, y_pred)
+    class_names = [0, 1]
+    fig, ax = plt.subplots()
+    tick_marks = np.arange(len(class_names))
+    plt.xticks(tick_marks, class_names)
+    plt.yticks(tick_marks, class_names)
+    # create heatmap
+    sns.heatmap(pd.DataFrame(cnf_matrix), annot=True, cmap="YlGnBu", fmt='g')
+    ax.xaxis.set_label_position("top")
+    plt.tight_layout()
+    plt.title('Confusion matrix', y=1.1)
+    plt.ylabel('Actual label')
+    plt.xlabel('Predicted label')
+    return cnf_matrix
 
 
 def join_feature_name_with_importance_value(features, importances):
@@ -371,14 +379,6 @@ def get_supporting_features(row, feature_dictionary, feature_list):
     return supporting_features
 
 
-def compute_game_data(tourney_data, teams):
-    game_data = tourney_data.join(teams, on='win_team_id', how='left')
-    game_data.rename(columns={'kaggle_team_id': 'win_kaggle_team_id', 'conf_name': 'win_conf_name'}, inplace=True)
-    game_data = game_data.join(teams, on='lose_team_id', how='left')
-    game_data.rename(columns={'kaggle_team_id': 'lose_kaggle_team_id', 'conf_name': 'lose_conf_name'}, inplace=True)
-    return game_data
-
-
 def implement_top_conference_feature(tourney_data, teams, game_data, tourney_comp_ratings):
 
     games_won_conf = game_data.groupby('win_conf_name').size().reset_index(name='count').sort_values(by=['count'],
@@ -397,8 +397,93 @@ def implement_seed_threshold_feature(tourney_comp_ratings):
     return tourney_comp_ratings
 
 
-def hello():
-    print("Hello")
+def recode_tourney_data(tourney_data):
+    tourney_data['game_result'] = 1
+    tourney_data.game_result = tourney_data.game_result.astype(int)
+    tourney_data.rename(columns={"win_seed": "team_seed", "win_market": "team", "win_team_id": "team_id"}, inplace=True)
+    tourney_data.rename(columns={"lose_seed": "opp_team_seed", "lose_market": "opp_team",
+                                 "lose_team_id": "opp_team_id"}, inplace=True)
+
+    tourney_data['start_season'] = tourney_data['season'] - 1
+
+    # create some temporary buffer columns
+    tourney_data['copy_team'] = tourney_data['team']
+    tourney_data['copy_team_seed'] = tourney_data['team_seed']
+    tourney_data['copy_team_id'] = tourney_data['team_id']
+
+    # swap the team and opp team data
+    tourney_data.loc[1::2, 'team'] = tourney_data.loc[1::2, 'opp_team']
+    tourney_data.loc[1::2, 'opp_team'] = tourney_data.loc[1::2, 'copy_team']
+    tourney_data.loc[1::2, 'team_seed'] = tourney_data.loc[1::2, 'opp_team_seed']
+    tourney_data.loc[1::2, 'opp_team_seed'] = tourney_data.loc[1::2, 'copy_team_seed']
+    tourney_data.loc[1::2, 'team_id'] = tourney_data.loc[1::2, 'opp_team_id']
+    tourney_data.loc[1::2, 'opp_team_id'] = tourney_data.loc[1::2, 'copy_team_id']
+
+    # flip the game result
+    tourney_data.loc[1::2, 'game_result'] = 0
+
+    # drop the temporary columns
+    tourney_data.drop(columns=['copy_team', 'copy_team_seed', 'copy_team_id'], inplace=True)
+    tourney_data.rename(columns={"team_seed": "seed_t", "opp_team_seed": "seed_o"}, inplace=True)
+
+    tourney_data['Game Result'] = tourney_data.game_result.map({1: 'Win', 0: 'Lose'})
+
+    return tourney_data
+
+
+def compute_delta_features(tourney_comp_ratings):
+    tourney_comp_ratings['margin_victory_avg_t'] = tourney_comp_ratings['pts_avg_t'] - tourney_comp_ratings[
+        'opp_pts_avg_t']
+    tourney_comp_ratings['margin_victory_avg_o'] = tourney_comp_ratings['pts_avg_o'] - tourney_comp_ratings[
+        'opp_pts_avg_o']
+
+    tourney_comp_ratings['delta_margin_victory_avg'] = \
+        tourney_comp_ratings['margin_victory_avg_t'] - tourney_comp_ratings['margin_victory_avg_o']
+
+    tourney_comp_ratings['delta_fg_pct'] = tourney_comp_ratings['fg_pct_t'] - tourney_comp_ratings['fg_pct_o']
+
+    tourney_comp_ratings['delta_off_rebs_avg'] = tourney_comp_ratings['off_rebs_avg_t'] - tourney_comp_ratings[
+        'off_rebs_avg_o']
+
+    tourney_comp_ratings['delta_def_rebs_avg'] = tourney_comp_ratings['def_rebs_avg_t'] - tourney_comp_ratings[
+        'def_rebs_avg_o']
+
+    tourney_comp_ratings['delta_ft_pct'] = tourney_comp_ratings['ft_pct_t'] - tourney_comp_ratings['ft_pct_o']
+
+    tourney_comp_ratings['to_net_avg_t'] = tourney_comp_ratings['to_avg_t'] - tourney_comp_ratings['steal_avg_t']
+
+    tourney_comp_ratings['to_net_avg_o'] = tourney_comp_ratings['to_avg_o'] - tourney_comp_ratings['steal_avg_o']
+
+    tourney_comp_ratings['delta_to_net_avg'] = tourney_comp_ratings['to_net_avg_t'] - tourney_comp_ratings[
+        'to_net_avg_o']
+
+    tourney_comp_ratings['delta_win_pct'] = tourney_comp_ratings['win_pct_t'] - tourney_comp_ratings['win_pct_o']
+
+    tourney_comp_ratings['delta_off_rating'] = tourney_comp_ratings['off_rating_t'] - tourney_comp_ratings[
+        'off_rating_o']
+
+    tourney_comp_ratings['delta_ft_att_avg'] = tourney_comp_ratings['ft_att_avg_t'] - tourney_comp_ratings[
+        'ft_att_avg_o']
+
+    tourney_comp_ratings['delta_seed'] = tourney_comp_ratings['seed_t'] - tourney_comp_ratings['seed_o']
+
+    tourney_comp_ratings['delta_srs'] = tourney_comp_ratings['srs_t'] - tourney_comp_ratings['srs_o']
+    tourney_comp_ratings['delta_sos'] = tourney_comp_ratings['sos_t'] - tourney_comp_ratings['sos_o']
+
+    tourney_comp_ratings['delta_sag'] = tourney_comp_ratings['sag_t'] - tourney_comp_ratings['sag_o']
+    tourney_comp_ratings['delta_wlk'] = tourney_comp_ratings['wlk_t'] - tourney_comp_ratings['wlk_o']
+    tourney_comp_ratings['delta_wol'] = tourney_comp_ratings['wol_t'] - tourney_comp_ratings['wol_o']
+    tourney_comp_ratings['delta_rth'] = tourney_comp_ratings['rth_t'] - tourney_comp_ratings['rth_o']
+    tourney_comp_ratings['delta_col'] = tourney_comp_ratings['col_t'] - tourney_comp_ratings['col_o']
+    tourney_comp_ratings['delta_pom'] = tourney_comp_ratings['pom_t'] - tourney_comp_ratings['pom_o']
+    tourney_comp_ratings['delta_dol'] = tourney_comp_ratings['dol_t'] - tourney_comp_ratings['dol_o']
+    tourney_comp_ratings['delta_rpi'] = tourney_comp_ratings['rpi_t'] - tourney_comp_ratings['rpi_o']
+    tourney_comp_ratings['delta_mor'] = tourney_comp_ratings['mor_t'] - tourney_comp_ratings['mor_o']
+
+    tourney_comp_ratings.drop(columns=['season_o'], inplace=True)
+    tourney_comp_ratings.dropna(inplace=True)
+    return tourney_comp_ratings
+
 
 
 
