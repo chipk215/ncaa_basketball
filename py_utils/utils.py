@@ -363,6 +363,21 @@ class Feature_Dictionary:
         else:
             return self.high_supporting_statistic(stat_t, stat_o, game_result)
 
+    def get_high_stat_feature_labels(self):
+        labels = []
+        for key, value in self.feature_dictionary.items():
+            if value[0] == 'HIGH':
+                labels.append(key)
+        return labels
+
+    def get_low_stat_feature_labels(self):
+        labels = []
+        for key, value in self.feature_dictionary.items():
+            if value[0] == 'LOW':
+                labels.append(key)
+
+        return labels
+
 
 def get_supporting_features(row, feature_dictionary, feature_list):
     supporting_features = []
