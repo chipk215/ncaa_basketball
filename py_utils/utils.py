@@ -9,18 +9,22 @@ from sklearn.metrics import log_loss
 from sklearn.model_selection import cross_val_score
 
 
+# Helper function which assigns categorical value to top top conference teams
 def assign_top_conference_team(top_conference):
     if top_conference == 1:
         return 1
     return 0
 
 
+# Helper function which assigns categorical value to top top conference opponents
 def assign_top_conference_opp(top_conference):
     if top_conference == -1:
         return 1
     return 0
 
 
+# Merge game data with team meta-data so that team names are included in data set.
+# Encode winning and losing teams and conferences  in game data set
 def compute_game_data(tourney_data, teams):
     game_data = tourney_data.join(teams, on='win_team_id', how='left')
     game_data.rename(columns={'kaggle_team_id': 'win_kaggle_team_id', 'conf_name': 'win_conf_name'}, inplace=True)
@@ -29,6 +33,7 @@ def compute_game_data(tourney_data, teams):
     return game_data
 
 
+# Encode categorical feature indicating whether a team  belongs to a top conference or not
 def compute_top_conference(games_df, top_tournament_conferences_list):
     games_df['top_conf'] = games_df.apply(lambda row: conf_compare(row.conf_name_t, row.conf_name_o,
                                                                    top_tournament_conferences_list), axis=1)
@@ -58,6 +63,7 @@ def conf_compare(team_conf, opp_conf, top_tournament_conferences_list):
         return -1
 
 
+# Helper function to display a confusion matrix
 def display_confusion_matrix(y_test, y_pred):
     cnf_matrix = metrics.confusion_matrix(y_test, y_pred)
     class_names = [0, 1]
@@ -75,6 +81,7 @@ def display_confusion_matrix(y_test, y_pred):
     return cnf_matrix
 
 
+# Link a feature importance value with the corresponding feature name for readability
 def join_feature_name_with_importance_value(features, importances):
     """
     Join via a list of tuples, feature names with their importance values
@@ -93,6 +100,7 @@ def join_feature_name_with_importance_value(features, importances):
     return feature_importances_sorted
 
 
+# Helper function to display important feature values
 def display_important_features(important_features, features, display=1):
     feature_importances = join_feature_name_with_importance_value(features, important_features)
     if display:
@@ -102,13 +110,15 @@ def display_important_features(important_features, features, display=1):
     return feature_importances
 
 
+# Return the corresponding game record associated with a season, round and team
 def get_tournament_record(df, season, round_, team):
     return df[(df['season_t'] == season) & (df['round'] == round_) & (df['team_t'] == team)]
 
 
-def print_game_info(df, season, round_, team):
+# Helper function to print game information
+# May be obsolete
+def print_game_info_obsolete(df, season, round_, team):
     stat_dict = {}
-
     upset_count = 0
     stat_count = 0
     t_rec = get_tournament_record(df, season, round_, team)
@@ -197,6 +207,7 @@ def print_game_info(df, season, round_, team):
     return sorted_dict
 
 
+# Determine if a feature supports the true winner of a game
 def supporting_stat(hi_stat_flag, stat_t, stat_o, game_result):
     if hi_stat_flag:
         cond_1 = (game_result == -1) & (stat_t > stat_o)
@@ -208,6 +219,7 @@ def supporting_stat(hi_stat_flag, stat_t, stat_o, game_result):
     return not(cond_1 | cond_2)
 
 
+# Helper function to compute percentage of tournament games won by a team
 def compute_percentage(x, tournament_games):
     # print(x)
     game_count = tournament_games[x[0]]
@@ -217,12 +229,14 @@ def compute_percentage(x, tournament_games):
     return val
 
 
+# Hash function for features based upon feature name
 def get_hash_for_feature_labels(feature_list):
     join_string = '-'.join(feature_list)
     hash_value = hash(join_string)
     return hash_value
 
 
+# Save model stats to an in memory dictionary for summary reporting
 def save_model_stats(classifier, X, y, model_stats):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state= 5)
     classifier.fit(X_train, y_train)
@@ -243,12 +257,14 @@ def save_model_stats(classifier, X, y, model_stats):
     return model_stats
 
 
+# Helper function to recode losers from 0 value to -1 value
 def negate_loser(x):
     if x == 0:
         x = -1
     return x
 
 
+# A support class maintaining a dictionary of features and supporting methods.
 class Feature_Dictionary:
     def __init__(self):
         self.int_format_string = "{0:<20s}{1:15d}{2:>35d}{3:>15s}{4:>5s}"
@@ -500,6 +516,29 @@ def compute_delta_features(tourney_comp_ratings):
     return tourney_comp_ratings
 
 
+# Compute log loss for results
+# game_results is a numpy ndarray
+# team_one_win_probability is a numpy ndarray
+def compute_log_loss(game_results, team_one_win_probability):
+    # Ensure the arrays have the same number of elements
+    n_elements = game_results.size
+    if n_elements != team_one_win_probability.size:
+        print("Error. Parameter arrays must have the same number of elements.")
+        return -1
 
+    # Check the minimum values in game_results.
+    # If results are encoded as [1, -1] then convert to [1,0] where 1 indicated team one wins, 0 indicates team 2 wins
+    game_results[game_results == -1] = 0
 
+    team_one_win_probability[team_one_win_probability < 1E-6] = 1E-6
+    team_one_win_probability[team_one_win_probability > 0.999999] = 0.999999
+
+    term_one = game_results * np.log(team_one_win_probability)
+    term_two = (1 - game_results) * np.log(1 - team_one_win_probability)
+
+    sum_terms = term_one + term_two
+
+    log_loss_result = -1.0 * sum_terms.sum()/n_elements
+
+    return log_loss_result
 
