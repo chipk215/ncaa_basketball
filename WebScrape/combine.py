@@ -26,7 +26,7 @@ def run_main():
     df_2003 = pd.read_csv(Path(f_name))
     df_combined = drop_uncommon_ratings(df_2003, common_list)
 
-    for year in range(2004, 2019, 1):
+    for year in range(2004, 2020, 1):
         f_name = 'data/rankings_' + str(year) + '.csv'
         df = pd.read_csv(Path(f_name))
         df = drop_uncommon_ratings(df, common_list)

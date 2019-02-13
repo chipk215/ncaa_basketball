@@ -1,0 +1,13 @@
+The goal is to generate the massey_seasons_with_id.csv file with 9 specific computer rankings for each season beginning with 2003.
+The team names and Kaggle IDs should match Kaggle data.
+
+1. Using main.py generate rankings_season.csv file.
+For 2019 the RPI ranking is no longer included in the Massey ratings.
+Since RPI was dropped in our LR model anyway, we'll not include RPI as a computer ranking.
+
+2. Modify combine.py to incorporate seasons to be included in processing.
+combine.py drops computer rankings not common to all seasons.
+The output is combined_seasons.csv.
+
+3. Execute join_with_kaggle_id.py to adjust team names and add kaggle ids
+Output is massey_seasons_with_id.csv

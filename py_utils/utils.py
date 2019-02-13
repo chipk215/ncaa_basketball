@@ -279,7 +279,7 @@ class Feature_Dictionary:
             'col': ('LOW', self.float_format_string, 'COL', False),
             'pom': ('LOW', self.float_format_string, 'POM', False),
             'dol': ('LOW', self.float_format_string, 'DOL', False),
-            'rpi': ('LOW', self.float_format_string, 'RPI', False),
+            # 'rpi': ('LOW', self.float_format_string, 'RPI', False),
             'mor': ('LOW', self.float_format_string, 'MOR', False),
             'opp_pts_avg': ('LOW', self.float_format_string, 'Allow PPG', False),
             # 'allow_fg_pct': ('LOW', self.float_format_string, 'Allow FG %', True),
@@ -508,7 +508,7 @@ def compute_delta_features(tourney_comp_ratings):
     tourney_comp_ratings['delta_col'] = tourney_comp_ratings['col_t'] - tourney_comp_ratings['col_o']
     tourney_comp_ratings['delta_pom'] = tourney_comp_ratings['pom_t'] - tourney_comp_ratings['pom_o']
     tourney_comp_ratings['delta_dol'] = tourney_comp_ratings['dol_t'] - tourney_comp_ratings['dol_o']
-    tourney_comp_ratings['delta_rpi'] = tourney_comp_ratings['rpi_t'] - tourney_comp_ratings['rpi_o']
+    # tourney_comp_ratings['delta_rpi'] = tourney_comp_ratings['rpi_t'] - tourney_comp_ratings['rpi_o']
     tourney_comp_ratings['delta_mor'] = tourney_comp_ratings['mor_t'] - tourney_comp_ratings['mor_o']
 
     tourney_comp_ratings.drop(columns=['season_o'], inplace=True)

@@ -7,6 +7,8 @@ from pathlib import Path
 
 
 url_dict = {
+    # Note for 2019 the ratings have not yet been archived, the URL is likely to change
+    2019: "https://www.masseyratings.com/cb/compare.htm",
     2018: "https://www.masseyratings.com/cb/arch/compare2018-18.htm",
     2017: "https://www.masseyratings.com/cb/arch/compare2017-18.htm",
     2016: "https://www.masseyratings.com/cb/arch/compare2016-18.htm",
@@ -25,7 +27,19 @@ url_dict = {
     2003: "https://www.masseyratings.com/cb/arch/compare2003-14.htm"
 }
 
+# column widths for ratings table layout - we need a better way to do this. THe underlying issue is that team names
+# include white space
 width_dict = {
+    # 58 rankings
+    2019: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
+           5, 18, 4, 7, 6, 4, 4, 4, 4, 6,
+           4, 4, 4, 4, 6, 4, 4, 4, 4, 5,
+           11, 4, 4, 4, 4, 4, 6, 4, 4, 4,
+           4, 6, 4, 4, 4, 4, 5, 11, 4, 4,
+           4, 4, 4, 6, 4, 4, 4, 4, 6, 4,
+           4, 4, 4, 5, 11, 4, 4, 4, 8,
+           7, 7],
+    # 68 rankings
     2018: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 18, 4, 7, 6, 4, 4, 4, 4, 6,
            4, 4, 4, 4, 6, 4, 4, 4, 4, 5,
@@ -35,6 +49,7 @@ width_dict = {
            4, 4, 4, 5, 11, 4, 4, 4, 4, 4,
            6, 4, 4, 4, 4, 6, 4, 4, 8, 7,
            7],
+    # 75 rankings
     2017: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 18, 4, 7, 6, 4, 4, 4, 4, 6,
            4, 4, 4, 4, 6, 4, 4, 4, 4, 5,
@@ -44,6 +59,7 @@ width_dict = {
            4, 4, 4, 5, 11, 5, 4, 4, 4, 4,
            6, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            4, 11, 4, 4, 4, 4, 4, 8, 7, 7],
+    # 62 rankings
     2016: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 18, 4, 7, 6, 4, 4, 4, 4, 6,
            4, 4, 4, 4, 6, 4, 4, 4, 4, 5,
@@ -52,6 +68,7 @@ width_dict = {
            4, 4, 4, 6, 4, 4, 4, 4, 6, 4,
            4, 4, 4, 5, 11, 5, 4, 4, 4, 4,
            6, 4, 8, 7, 7],
+    # 62 rankings
     2015: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 7, 6, 4, 4, 4, 4, 6,
            4, 4, 4, 4, 6, 4, 4, 4, 4, 5,
@@ -60,6 +77,7 @@ width_dict = {
            4, 4, 4, 6, 4, 4, 4, 4, 6, 4,
            4, 4, 4, 5, 11, 5, 4, 4, 4, 4,
            6, 4, 8, 7, 7],
+    # 65 rankings
     2014: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 7, 6, 4, 4, 4, 4, 6,
            4, 4, 4, 4, 6, 4, 4, 4, 4, 5,
@@ -68,6 +86,7 @@ width_dict = {
            4, 4, 4, 6, 4, 4, 4, 4, 6, 4,
            4, 4, 4, 5, 11, 4, 4, 4, 4, 4,
            6, 4, 4, 4, 4, 8, 7, 7],
+    # 60 rankings
     2013: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 7, 6, 4, 4, 4, 4, 6,
            4, 4, 4, 4, 6, 4, 4, 4, 4, 5,
@@ -76,6 +95,7 @@ width_dict = {
            4, 4, 4, 6, 4, 4, 4, 4, 6, 4,
            4, 4, 4, 5, 11, 4, 4, 4, 4, 4,
            5, 8, 7, 7],
+    # 61 rankings
     2012: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 7, 6, 4, 4, 4, 4, 6,
            4, 4, 4, 4, 6, 4, 4, 4, 4, 5,
@@ -84,6 +104,7 @@ width_dict = {
            4, 4, 4, 6, 4, 4, 4, 4, 6, 4,
            4, 4, 4, 5, 11, 4, 4, 4, 4, 4,
            5, 8, 7, 7],
+    # 52 rankings
     2011: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 7, 6, 4, 4, 4, 4, 6,
            4, 4, 4, 4, 6, 4, 4, 4, 4, 5,
@@ -91,6 +112,7 @@ width_dict = {
            4, 6, 4, 4, 4, 4, 5, 11, 4, 4,
            4, 4, 4, 5, 4, 4, 4, 4, 6, 4,
            8, 7, 7],
+    # 52 rankings
     2010: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 7, 6, 4, 4, 4, 4, 6,
            4, 4, 4, 4, 6, 4, 4, 4, 4, 5,
@@ -98,39 +120,46 @@ width_dict = {
            4, 6, 4, 4, 4, 4, 5, 11, 4, 4,
            4, 4, 4, 5, 4, 4, 4, 4, 6, 4,
            8, 7, 7],
+    # 45 rankings
     2009: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
            4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
            4, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            6, 4, 4, 4, 4, 5, 11, 4, 4, 4,
            4, 4, 8, 7, 7],
+    # 44 rankings
     2008: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
            4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
            4, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            6, 4, 4, 4, 4, 5, 11, 4, 4, 4,
            4, 8, 7, 7],
+    # 42 rankings
     2007: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
            4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
            4, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            6, 4, 4, 4, 4, 5, 11, 4, 4, 8,
            7, 7],
+    # 37 rankings
     2006: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
            4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
            4, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            6, 4, 8, 7, 7],
+    # 39 rankings
     2005: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
            4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
            4, 4, 4, 4, 4, 6, 4, 4, 4, 6,
            4, 4, 4, 7, 5, 7, 7],
+    # 36 rankings
     2004: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
            4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
            4, 4, 4, 4, 4, 6, 4, 4, 4, 6,
            6, 7, 7, 7],
+    # 34 rankings
     2003: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 17, 6, 5, 4, 4, 4, 4, 6, 4,
            4, 4, 4, 6, 4, 4, 4, 4, 5, 11,
@@ -138,7 +167,9 @@ width_dict = {
            7, 7]
 }
 
+# Identifies the starting row for the rankings data
 start_text_dict = {
+    2019: "WMV BWE",
     2018: 'WLK BWE',
     2017: 'BWE WLK',
     2016: 'BWE FAS',
@@ -157,6 +188,50 @@ start_text_dict = {
     2003: 'SAG BOB'
 }
 
+drop_columns_dict = {
+    2019: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'BNT',
+           'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev'],
+
+    2018: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'BNT',
+           'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev'],
+
+    2017: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'Rank_4', 'Team_4',
+           'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev'],
+
+    2016: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'D1A',
+           'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev'],
+
+    2015: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'D1A',
+           'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev'],
+
+    2014: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'D1A',
+           'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev'],
+
+    2013: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'D1A',
+           'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev'],
+
+    2012: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3',
+           'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev'],
+
+    2011: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev'],
+
+    2010: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'TRX', 'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev'],
+
+    2009: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'TRX', 'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev'],
+
+    2008: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'LYN', 'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev'],
+
+    2007: ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'LYN', 'USA', 'AP', 'Mean', 'Median', 'St.Dev'],
+
+    2006: ['Record', 'Rank_1', 'Team_1', 'TRX', 'LYN', 'USA', 'AP', 'Mean', 'Median', 'St.Dev'],
+
+    2005: ['Record', 'Rank_1', 'Team_1', 'LYN', 'DES', 'USA', 'AP', 'Mean', 'Median', 'St.Dev'],
+
+    2004: ['Record', 'Rank_1', 'Team_1', 'LYN', 'DES', 'USA', 'AP', 'Mean', 'Median', 'St.Dev'],
+
+    2003: ['Record', 'Rank_1', 'Team_1', 'USA', 'AP', 'Mean', 'Median', 'St.Dev']
+}
+
 
 def make_csv_line(line):
     no_comma = line.lstrip(' ').replace(',', '')
@@ -172,8 +247,9 @@ def compute_win_percentage(team_record):
     return float(int(components[0]))/(int(components[0]) + int(components[1]))
 
 
-def run_main():
-    season = 2003
+# This function processes one season at a time as specified by the season variable
+def run_main(season):
+    # season = 2003
 
     source = requests.get(url_dict[season]).text
     soup = BeautifulSoup(source, 'lxml')
@@ -217,6 +293,8 @@ def run_main():
     rank_indices = [i for i, column in enumerate(column_names) if column == 'Rank']
     rank_indices = rank_indices[1:]
 
+    # Rank and Team columns are repeated across the table.
+    # Add a integer suffix to occurrences 2-n of the Rank and Team labels to make them distinct
     for i in range(1, len(rank_indices)+1):
         str_index = str(i)
         column_names[rank_indices[i-1]] = 'Rank_' + str_index
@@ -226,63 +304,13 @@ def run_main():
     for line in result[1:]:
         string_buffer = string_buffer + line + "\n"
 
-    # len(width_dict[season])
-    df = pd.read_fwf(StringIO(string_buffer), widths=width_dict[season], names=column_names,
-                     usecols=column_names[:42])
+    df = pd.read_fwf(StringIO(string_buffer), widths=width_dict[season], names=column_names)
 
     df['season'] = season
 
     df['win_pct'] = df.apply(lambda row: compute_win_percentage(row.Record), axis=1)
 
-    drop_cols_2018 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'BNT',
-                      'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2017 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'Rank_4', 'Team_4',
-                      'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2016 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'D1A',
-                      'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2015 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'D1A',
-                      'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2014 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'D1A',
-                      'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2013 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3', 'D1A',
-                      'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2012 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'Rank_3', 'Team_3',
-                      'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2011 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2',
-                      'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2010 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'TRX',
-                      'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2009 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'TRX',
-                      'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2008 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'LYN',
-                      'USA', 'AP', 'DES', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2007 = ['Record', 'Rank_1', 'Team_1', 'Rank_2', 'Team_2', 'LYN',
-                      'USA', 'AP', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2006 = ['Record', 'Rank_1', 'Team_1', 'TRX', 'LYN',
-                      'USA', 'AP', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2005 = ['Record', 'Rank_1', 'Team_1', 'LYN', 'DES',
-                      'USA', 'AP', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2004 = ['Record', 'Rank_1', 'Team_1', 'LYN', 'DES',
-                      'USA', 'AP', 'Mean', 'Median', 'St.Dev']
-
-    drop_cols_2003 = ['Record', 'Rank_1', 'Team_1', 
-                      'USA', 'AP', 'Mean', 'Median', 'St.Dev']
-
-    df.drop(columns=drop_cols_2003, inplace=True)
+    df.drop(columns=drop_columns_dict[season], inplace=True)
 
     f_name = 'data/rankings_' + str(season) + '.csv'
     csv_file = Path(f_name)
@@ -294,5 +322,5 @@ def run_main():
 
 
 if __name__ == "__main__":
-    run_main()
+    run_main(2019)
 
