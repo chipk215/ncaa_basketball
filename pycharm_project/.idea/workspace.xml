@@ -1,31 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/tree_sample.py" line="119" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/tree_sample.py" line="36" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80101d2c-0263-46dc-9f4c-956ec0b2e23b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/make_games.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tree_sample.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tournament_bracket.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Data/sr_summaries_kaggle_id_no_opp.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/sr_summaries_kaggle_id_no_opp.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-2019-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-2019-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-Delta_No_Opp_Stats-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-Delta_No_Opp_Stats-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/TensorFlow/.ipynb_checkpoints/Estimator_DNNClassifier-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/TensorFlow/.ipynb_checkpoints/Estimator_DNNClassifier-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/TensorFlow/.ipynb_checkpoints/Estimator_LinearClassifier-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/TensorFlow/.ipynb_checkpoints/Estimator_LinearClassifier-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/TensorFlow/Estimator_DNNClassifier.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/TensorFlow/Estimator_DNNClassifier.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/TensorFlow/Estimator_LinearClassifier.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/TensorFlow/Estimator_LinearClassifier.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_LR-2019.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_LR-2019.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_LR-Delta_No_Opp_Stats.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_LR-Delta_No_Opp_Stats.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SQL/import_srcbb_basic_no_opponent.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL/import_srcbb_basic_no_opponent.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebScrape/combine.py" beforeDir="false" afterPath="$PROJECT_DIR$/../WebScrape/combine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebScrape/data/combined_seasons.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../WebScrape/data/combined_seasons.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebScrape/data/massey_seasons_with_id.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../WebScrape/data/massey_seasons_with_id.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebScrape/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../WebScrape/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../py_utils/utility_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../py_utils/utility_project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../py_utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py_utils/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/CHIPK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/CHIPK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pycharm_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pycharm_project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/tree_sample.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +26,7 @@
     <SUITE FILE_PATH="coverage/pycharm_project$make_games.coverage" NAME="make_games Coverage Results" MODIFIED="1550017436058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pycharm_project$pycharm_project.coverage" NAME="pycharm_project Coverage Results" MODIFIED="1544118779239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pycharm_project$game_statistic_check.coverage" NAME="game_statistic_check Coverage Results" MODIFIED="1544034957499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pycharm_project$tree_sample.coverage" NAME="tree_sample Coverage Results" MODIFIED="1550079660782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pycharm_project$tree_sample.coverage" NAME="tree_sample Coverage Results" MODIFIED="1550173420828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -59,53 +47,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/make_games.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="408">
+              <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tree_sample.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+              <folding>
+                <element signature="e#1#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tree_sample.py">
+        <entry file="file://$PROJECT_DIR$/../py_utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="301">
+              <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
               <folding>
-                <element signature="e#0#6#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/ncaa/Lib/site-packages/pandas/core/indexing.py">
+        <entry file="file://$PROJECT_DIR$/tournament_bracket.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="1515" selection-start-line="1515" selection-end-line="1515" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" selection-start-line="31" selection-end-line="33" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="965">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="47">
+              <caret line="86" column="23" lean-forward="true" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -139,14 +118,18 @@
         <option value="$PROJECT_DIR$/common.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/make_games.py" />
+        <option value="$PROJECT_DIR$/TournamentBracket.py" />
+        <option value="$PROJECT_DIR$/tournament_bracket.py" />
         <option value="$PROJECT_DIR$/tree_sample.py" />
+        <option value="$PROJECT_DIR$/../py_utils/utils.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="577" />
-    <option name="width" value="3273" />
-    <option name="height" value="2111" />
+    <option name="x" value="157" />
+    <option name="y" value="169" />
+    <option name="width" value="2762" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -168,6 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -184,12 +168,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebScrape" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../py_utils/file_utils.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -387,24 +370,25 @@
       <workItem from="1549902606404" duration="7823000" />
       <workItem from="1550012966503" duration="2097000" />
       <workItem from="1550016676460" duration="356000" />
-      <workItem from="1550017076491" duration="12132000" />
+      <workItem from="1550017076491" duration="12727000" />
+      <workItem from="1550160065138" duration="15278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69482000" />
+    <option name="totallyTimeSpent" value="85355000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="385" y="0" width="2182" height="1407" extended-state="0" />
+    <frame x="105" y="113" width="1841" height="725" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12393968" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14879282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3457526" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.27372548" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.27372548" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -412,14 +396,14 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32949087" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5018647" side_tool="true" weight="0.33551198" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49974963" weight="0.32756963" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49813533" weight="0.19137254" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49974963" weight="0.32657832" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.49813533" visible="true" weight="0.11467116" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" sideWeight="0.4960815" weight="0.3760603" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" x="0" y="0" width="229" height="499" id="Documentation" order="5" sideWeight="0.50391847" side_tool="true" weight="0.3760603" />
+      <window_info anchor="right" x="0" y="0" width="229" height="499" id="Documentation" order="5" sideWeight="0.50391847" side_tool="true" weight="0.37579617" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,16 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../py_utils/file_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/pandas/core/ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -652,16 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../py_utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="70" lean-forward="true" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/pandas/core/internals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -676,10 +640,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/ncaa/Lib/site-packages/pandas/core/indexing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25449">
+          <caret line="1515" selection-start-line="1515" selection-end-line="1515" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="965">
+        <state relative-caret-position="1530">
           <caret line="91" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../py_utils/file_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/make_games.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -696,29 +687,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/make_games.py">
+    <entry file="file://$PROJECT_DIR$/tournament_bracket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="29" />
+        <state relative-caret-position="47">
+          <caret line="86" column="23" lean-forward="true" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/ncaa/Lib/site-packages/pandas/core/indexing.py">
+    <entry file="file://$PROJECT_DIR$/tree_sample.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="1515" selection-start-line="1515" selection-end-line="1515" />
+        <state relative-caret-position="182">
+          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding>
+            <element signature="e#1#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tree_sample.py">
+    <entry file="file://$PROJECT_DIR$/../py_utils/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="301">
+          <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
           <folding>
-            <element signature="e#0#6#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
