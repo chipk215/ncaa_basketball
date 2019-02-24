@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80101d2c-0263-46dc-9f4c-956ec0b2e23b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tournament_bracket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/sr_summaries_kaggle_id_no_opp.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/sr_summaries_kaggle_id_no_opp.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-2019-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-2019-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-Delta_No_Opp_Stats-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/.ipynb_checkpoints/Tournament_Model_LR-Delta_No_Opp_Stats-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_LR-2019.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_LR-2019.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_LR-Delta_No_Opp_Stats.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_LR-Delta_No_Opp_Stats.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../py_utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../py_utils/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tree_sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/tree_sample.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/make_games.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-216">
+              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -59,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tree_sample.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+            <state relative-caret-position="119">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
               <folding>
                 <element signature="e#1#37#0" expanded="true" />
               </folding>
@@ -71,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../py_utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+            <state relative-caret-position="-9891">
+              <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -81,10 +70,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/teams_2019.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tournament_bracket.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="86" column="23" lean-forward="true" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+            <state relative-caret-position="53">
+              <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -126,10 +120,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="157" />
-    <option name="y" value="169" />
-    <option name="width" value="2762" />
-    <option name="height" value="1088" />
+    <option name="x" value="3925" />
+    <option name="y" value="823" />
+    <option name="width" value="1842" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -172,7 +166,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../py_utils/file_utils.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../py_utils/utils.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -198,7 +192,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tree_sample">
+  <component name="RunManager" selected="Python.make_games">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="pycharm_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -269,9 +263,6 @@
       <module name="pycharm_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -313,6 +304,9 @@
       <module name="pycharm_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -337,8 +331,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tree_sample" />
         <item itemvalue="Python.make_games" />
+        <item itemvalue="Python.tree_sample" />
         <item itemvalue="Python.common_tests" />
         <item itemvalue="Python.game_statistic_check" />
       </list>
@@ -372,17 +366,18 @@
       <workItem from="1550016676460" duration="356000" />
       <workItem from="1550017076491" duration="12727000" />
       <workItem from="1550160065138" duration="15278000" />
+      <workItem from="1550783218059" duration="2224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85355000" />
+    <option name="totallyTimeSpent" value="87579000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="105" y="113" width="1841" height="725" extended-state="0" />
+    <frame x="3925" y="823" width="1842" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14879282" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15039282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -397,13 +392,13 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5018647" side_tool="true" weight="0.33551198" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49974963" weight="0.32657832" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.49813533" visible="true" weight="0.11467116" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49813533" visible="true" weight="0.05059022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" sideWeight="0.4960815" weight="0.3760603" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" x="0" y="0" width="229" height="499" id="Documentation" order="5" sideWeight="0.50391847" side_tool="true" weight="0.37579617" />
+      <window_info anchor="right" x="0" y="0" width="229" height="499" id="Documentation" order="5" sideWeight="0.50391847" side_tool="true" weight="0.37542087" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,26 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../py_utils/file_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/make_games.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -687,10 +662,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/teams_2019.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/tournament_bracket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="86" column="23" lean-forward="true" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+        <state relative-caret-position="53">
+          <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/make_games.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../py_utils/file_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -699,8 +694,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tree_sample.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        <state relative-caret-position="119">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
           <folding>
             <element signature="e#1#37#0" expanded="true" />
           </folding>
@@ -709,8 +704,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../py_utils/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+        <state relative-caret-position="-9891">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
