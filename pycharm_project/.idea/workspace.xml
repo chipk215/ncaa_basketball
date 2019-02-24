@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/tree_sample.py" line="36" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80101d2c-0263-46dc-9f4c-956ec0b2e23b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Models/Tournament_Model_LR-2019.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Tournament_Model_LR-2019.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="80101d2c-0263-46dc-9f4c-956ec0b2e23b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -375,7 +373,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3925" y="823" width="1842" height="726" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15039282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
