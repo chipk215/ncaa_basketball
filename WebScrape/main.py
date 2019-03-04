@@ -30,7 +30,7 @@ url_dict = {
 # column widths for ratings table layout - we need a better way to do this. THe underlying issue is that team names
 # include white space
 width_dict = {
-    # 58 rankings
+    # 66 rankings
     2019: [3, 4, 4, 4, 4, 6, 4, 4, 4, 4,
            5, 18, 4, 7, 6, 4, 4, 4, 4, 6,
            4, 4, 4, 4, 6, 4, 4, 4, 4, 5,
