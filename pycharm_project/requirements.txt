@@ -1,4 +1,0 @@
-anytree
-numpy
-pandas
-sqlalchemy

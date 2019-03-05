@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80cd3265-6807-450b-96e6-15698b1417db" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/NCAA_Data.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NCAA_Data.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/massey_seasons_with_id_2019.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/massey_seasons_with_id_2019.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/sr_summaries_kaggle_id_no_opp.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/sr_summaries_kaggle_id_no_opp.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/teams_2019.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/teams_2019.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/.ipynb_checkpoints/Tournament_Model_AdaBoost-Delta_No_Opp_Stats-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/.ipynb_checkpoints/Tournament_Model_AdaBoost-Delta_No_Opp_Stats-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/.ipynb_checkpoints/Tournament_Model_LR-Delta_No_Opp_Stats-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/.ipynb_checkpoints/Tournament_Model_LR-Delta_No_Opp_Stats-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tournament_Model_AdaBoost-Delta_No_Opp_Stats.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tournament_Model_AdaBoost-Delta_No_Opp_Stats.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tournament_Model_LR-2019.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tournament_Model_LR-2019.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tournament_Model_LR-Delta_No_Opp_Stats.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tournament_Model_LR-Delta_No_Opp_Stats.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrape/data/combined_seasons.csv" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrape/data/combined_seasons.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrape/data/massey_seasons_with_id.csv" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrape/data/massey_seasons_with_id.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrape/data/rankings_2019.csv" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrape/data/rankings_2019.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScrape/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebScrape/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker_run.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docker_run.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycharm_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pycharm_project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycharm_project/tournament_bracket.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycharm_project/tournament_bracket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycharm_project/tree_sample.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycharm_project/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pycharm_project/tournament_bracket.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,18 +14,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pycharm_project/tournament_bracket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="274" column="4" selection-start-line="274" selection-start-column="4" selection-end-line="274" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pycharm_project/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
@@ -103,7 +73,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -129,16 +99,15 @@
       <updated>1551148694275</updated>
       <workItem from="1551148696998" duration="243000" />
       <workItem from="1551149015351" duration="99000" />
-      <workItem from="1551543108269" duration="1666000" />
+      <workItem from="1551543108269" duration="2433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2008000" />
+    <option name="totallyTimeSpent" value="2775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3832" y="494" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24279615" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -177,20 +146,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pycharm_project/main.py">
+    <entry file="file://$PROJECT_DIR$/pycharm_project/tournament_bracket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="14" lean-forward="true" selection-start-line="31" selection-end-line="32" selection-end-column="14" />
+        <state relative-caret-position="-1815">
+          <caret line="172" column="33" lean-forward="true" selection-start-line="172" selection-start-column="33" selection-end-line="172" selection-end-column="33" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pycharm_project/tournament_bracket.py">
+    <entry file="file://$PROJECT_DIR$/pycharm_project/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pycharm_project/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="274" column="4" selection-start-line="274" selection-start-column="4" selection-end-line="274" selection-end-column="4" />
+        <state relative-caret-position="544">
+          <caret line="32" column="14" lean-forward="true" selection-start-line="31" selection-end-line="32" selection-end-column="14" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
